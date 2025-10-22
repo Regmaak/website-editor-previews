@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex - AI-Powered Landing Page Builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Glossy effect utilities */
+        .glossy {
+            background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glossy-card {
+            background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(20,20,20,0.95));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5),
+                        inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 60px;
+            backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(0,0,0,0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            z-index: 1000;
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .cta-button {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+            color: #000000;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(255,255,255,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255,255,255,0.3);
+        }
+
+        /* Waitlist Form */
+        .waitlist-form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .waitlist-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 18px 24px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            color: #ffffff;
+            font-size: 16px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .waitlist-input::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+
+        .waitlist-input:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .waitlist-submit {
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
+            color: #000000;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(255,255,255,0.2);
+            white-space: nowrap;
+        }
+
+        .waitlist-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(255,255,255,0.3);
+        }
+
+        .beta-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 60px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 28px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+            margin-bottom: 48px;
+            font-weight: 400;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .primary-button {
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #ffffff 0%, #d0d0d0 100%);
+            color: #000000;
+            border: none;
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(255,255,255,0.2);
+        }
+
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(255,255,255,0.3);
+        }
+
+        .secondary-button {
+            padding: 18px 40px;
+            background: rgba(255,255,255,0.05);
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .secondary-button:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 120px 60px;
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 56px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+        }
+
+        .section-subtitle {
+            font-size: 22px;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            margin-bottom: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .problem-card {
+            padding: 48px;
+            transition: transform 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .problem-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .problem-card p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 120px 60px;
+            background: #000000;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .feature-card {
+            padding: 56px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .feature-number {
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .feature-card h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .feature-card p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            font-size: 17px;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            color: rgba(255,255,255,0.6);
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '→';
+            margin-right: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 120px 60px;
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 80px;
+        }
+
+        .benefit-card {
+            padding: 48px;
+            display: flex;
+            align-items: start;
+            gap: 24px;
+            transition: all 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            min-width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+        }
+
+        .benefit-content h4 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .benefit-content p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 160px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1000px;
+            height: 1000px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            font-size: 24px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 60px 40px;
+            background: rgba(10,10,10,0.9);
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-brand .logo {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .footer-column h5 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 56px;
+            }
+
+            .subtitle {
+                font-size: 22px;
+            }
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 30px;
+            }
+
+            .hero {
+                padding: 100px 30px 60px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .primary-button,
+            .secondary-button {
+                width: 100%;
+            }
+
+            .problem-section,
+            .features-section,
+            .benefits-section,
+            .cta-section {
+                padding: 80px 30px;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Gradient text utility */
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Social Proof Section */
+        .social-proof-section {
+            padding: 120px 60px;
+            background: #000000;
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 32px;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .use-case-card {
+            padding: 32px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .use-case-card:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.12);
+            transform: translateY(-4px);
+        }
+
+        .use-case-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .use-case-description {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Apex</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#waitlist">Early Access</a></li>
+            </ul>
+            <button class="cta-button" onclick="document.getElementById('waitlist').scrollIntoView({behavior: 'smooth'})">Join Waitlist</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="beta-badge">🚀 Early Beta Access</div>
+            <h1>Your Brand.<br>Every Page. Perfect.</h1>
+            <p class="subtitle">Deploy campaign pages, A/B tests, ad landing pages, and more—all perfectly on-brand. Stop the paid growth bottleneck. Preserve your design system. Ship at the speed of thought.</p>
+            <form class="waitlist-form" onsubmit="event.preventDefault(); alert('Thank you for joining! We\'ll be in touch soon.');">
+                <input type="email" class="waitlist-input" placeholder="Enter your email" required>
+                <button type="submit" class="waitlist-submit">Join Beta Waitlist</button>
+            </form>
+            <p style="margin-top: 16px; font-size: 14px; color: rgba(255,255,255,0.5);">🔒 Limited spots available · No credit card required</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Marketing Moves Fast.<br>Your Tools Don't.</h2>
+            <p class="section-subtitle">High-performing teams are bottlenecked by outdated workflows. Time-to-market matters, and every day delayed is opportunity lost.</p>
+
+            <div class="problem-grid">
+                <div class="problem-card glossy-card">
+                    <div class="problem-icon">⏱️</div>
+                    <h3>Speed Kills Growth</h3>
+                    <p>Campaign ideas take weeks to launch. By the time your pages are live, competitors have moved on to the next opportunity.</p>
+                </div>
+
+                <div class="problem-card glossy-card">
+                    <div class="problem-icon">🔧</div>
+                    <h3>Engineering Bottleneck</h3>
+                    <p>Your roadmap is stuck in dev queues. Marketing can't move independently, and testing new strategies becomes impossible.</p>
+                </div>
+
+                <div class="problem-card glossy-card">
+                    <div class="problem-icon">🎨</div>
+                    <h3>Brand Consistency Lost</h3>
+                    <p>Every tool promises "on-brand" pages. Reality? Fonts are off, colors don't match, and components feel foreign. Your brand gets diluted one page at a time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">Brand Preservation. Zero Compromise.</h2>
+            <p class="section-subtitle">Apex learns your design system once, then generates unlimited campaigns, tests, and ad pages—each one pixel-perfect and deployment-ready.</p>
+
+            <div class="features-grid">
+                <div class="feature-card glossy-card">
+                    <div class="feature-number">01</div>
+                    <h3>Lock In Your Brand</h3>
+                    <p>Feed Apex your website once. It extracts every element of your design system—colors, fonts, spacing, components—and preserves them across every single page it creates.</p>
+                    <ul class="feature-list">
+                        <li>Design system extraction in seconds</li>
+                        <li>Component library preservation</li>
+                        <li>Brand consistency guaranteed</li>
+                        <li>Asset management built-in</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glossy-card">
+                    <div class="feature-number">02</div>
+                    <h3>Generate Everything</h3>
+                    <p>Campaign pages. A/B test variants. Ad landing pages. SEO pages. ABM pages. Describe what you need or upload a CSV—Apex builds them all, perfectly branded.</p>
+                    <ul class="feature-list">
+                        <li>Campaign & ad page generation</li>
+                        <li>A/B test variant creation</li>
+                        <li>Bulk SEO/GEO page deployment</li>
+                        <li>Personalized ABM experiences</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glossy-card">
+                    <div class="feature-number">03</div>
+                    <h3>Deploy Instantly</h3>
+                    <p>No rebuilds. No dev tickets. No deployment nightmares. Pages are production-ready and optimized the moment they're generated. Push live with confidence.</p>
+                    <ul class="feature-list">
+                        <li>One-click deployment</li>
+                        <li>Production-ready code output</li>
+                        <li>Performance optimized automatically</li>
+                        <li>Zero configuration required</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">What Changes When You Use Apex</h2>
+            <p class="section-subtitle">Stop waiting on dev cycles. Start shipping campaigns that matter. Your competitors wish they moved this fast.</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-content">
+                        <h4>Ship Campaigns in Hours, Not Weeks</h4>
+                        <p>Morning standup to live campaign by lunch. Test more ideas, iterate faster, and capture opportunities before they vanish.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h4>Brand Consistency, Guaranteed</h4>
+                        <p>Every generated page matches your design system perfectly. No more off-brand disasters from quick-turn tools.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-content">
+                        <h4>Ad-to-Page Precision</h4>
+                        <p>Match every ad group with a custom landing page. Eliminate exit points, sync messaging perfectly, and watch conversion rates climb.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon">🔍</div>
+                    <div class="benefit-content">
+                        <h4>SEO at Scale</h4>
+                        <p>Generate geo-targeted and keyword-optimized pages by the hundreds. Own your category in search without armies of writers.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon">🚀</div>
+                    <div class="benefit-content">
+                        <h4>Spreadsheet to 1000 Pages</h4>
+                        <p>Upload a CSV with cities, personas, or products. Generate hundreds of unique, on-brand pages programmatically. One input, infinite scale.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon">💡</div>
+                    <div class="benefit-content">
+                        <h4>Marketing Independence</h4>
+                        <p>Own your velocity. No more sprint planning negotiations or waiting for engineering resources to free up.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof-section">
+        <div class="container">
+            <h2 class="section-title">Built for Performance</h2>
+            <p class="section-subtitle">Teams using AI-powered page generation see dramatic improvements in speed, scale, and conversion performance.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10x</div>
+                    <div class="stat-label">Faster Time-to-Market</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Brand Consistency</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Pages from One Input</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-number">24hrs</div>
+                    <div class="stat-label">From Idea to Live</div>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle" style="margin-top: 100px; margin-bottom: 40px; font-size: 28px; color: rgba(255,255,255,0.9);">Perfect For</h3>
+
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <div class="use-case-title">🎯 Paid Ad Campaigns</div>
+                    <div class="use-case-description">Create unique landing pages for every ad group. Match messaging perfectly and eliminate friction between click and conversion.</div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-title">🧪 A/B Testing</div>
+                    <div class="use-case-description">Generate dozens of page variants instantly. Test layouts, messaging, and CTAs without touching code or waiting on dev resources.</div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-title">🌍 SEO/GEO Pages</div>
+                    <div class="use-case-description">Deploy hundreds of geo-targeted or keyword-optimized pages. Own local search results and capture high-intent traffic at scale.</div>
+                </div>
+
+                <div class="use-case-card">
+                    <div class="use-case-title">👔 ABM Campaigns</div>
+                    <div class="use-case-description">Personalize pages for every target account. Show prospects you understand their needs with custom, relevant experiences.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="waitlist" class="cta-section">
+        <div class="cta-content">
+            <div class="beta-badge">✨ Exclusive Early Access</div>
+            <h2>Be Among the First<br>to Experience Apex</h2>
+            <p>We're onboarding a limited number of beta users. Join the waitlist to get priority access and help shape the future of brand-consistent, instant deployment.</p>
+            <form class="waitlist-form" onsubmit="event.preventDefault(); alert('🎉 You\'re on the list! Check your email for next steps.');" style="margin-top: 40px; max-width: 600px;">
+                <input type="email" class="waitlist-input" placeholder="Enter your work email" required>
+                <button type="submit" class="waitlist-submit">Get Early Access</button>
+            </form>
+            <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">Join 2,847 marketers already on the waitlist · Average wait time: 2 weeks</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;">
+            <div class="footer-brand" style="max-width: 100%;">
+                <div class="logo">Apex</div>
+                <p>AI-powered page generation that preserves your brand across campaigns, A/B tests, and ads.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Apex. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
