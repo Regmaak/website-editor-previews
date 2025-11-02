@@ -27,12 +27,12 @@
         }
 
         .glossy-card {
-            background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(20,20,20,0.95));
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: linear-gradient(145deg, rgba(30,30,30,0.3), rgba(20,20,20,0.4));
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255,255,255,0.12);
             border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5),
-                        inset 0 1px 0 rgba(255,255,255,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3),
+                        inset 0 1px 0 rgba(255,255,255,0.15);
         }
 
         /* Navigation */
@@ -258,7 +258,7 @@
 
         /* Problem Section */
         .problem-section {
-            padding: 120px 60px;
+            padding: 80px 60px;
             background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
         }
 
@@ -320,15 +320,16 @@
 
         /* Features Section */
         .features-section {
-            padding: 120px 60px;
+            padding: 80px 60px;
             background: #000000;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-top: 80px;
+            justify-items: center;
         }
 
         .feature-card {
@@ -336,6 +337,7 @@
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
+            width: 100%;
         }
 
         .feature-card::before {
@@ -399,7 +401,7 @@
 
         /* Benefits Section */
         .benefits-section {
-            padding: 120px 60px;
+            padding: 80px 60px;
             background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
         }
 
@@ -447,7 +449,7 @@
 
         /* CTA Section */
         .cta-section {
-            padding: 160px 60px;
+            padding: 100px 60px;
             position: relative;
             overflow: hidden;
         }
@@ -613,7 +615,7 @@
             .features-section,
             .benefits-section,
             .cta-section {
-                padding: 80px 30px;
+                padding: 60px 30px;
             }
 
             .problem-grid {
@@ -640,7 +642,7 @@
 
         /* Social Proof Section */
         .social-proof-section {
-            padding: 120px 60px;
+            padding: 80px 60px;
             background: #000000;
             position: relative;
         }
@@ -706,6 +708,196 @@
             color: rgba(255,255,255,0.6);
             line-height: 1.6;
         }
+
+        /* Examples Section */
+        .examples-section {
+            padding: 80px 60px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+            position: relative;
+        }
+
+        .example-showcase {
+            margin-top: 80px;
+            margin-bottom: 100px;
+        }
+
+        .example-showcase:last-child {
+            margin-bottom: 0;
+        }
+
+        .example-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .example-caption {
+            font-size: 15px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .transformation-flow {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 32px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stage {
+            text-align: center;
+        }
+
+        .stage-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .example-image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.4s ease;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+
+        .example-image-wrapper:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(255,255,255,0.15);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+        }
+
+        .example-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+        }
+
+        /* Fading edges effect */
+        .example-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom,
+                    rgba(0,0,0,0.1) 0%,
+                    transparent 15%,
+                    transparent 85%,
+                    rgba(0,0,0,0.4) 100%
+                ),
+                linear-gradient(to right,
+                    rgba(0,0,0,0.2) 0%,
+                    transparent 15%,
+                    transparent 85%,
+                    rgba(0,0,0,0.2) 100%
+                );
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 20px;
+        }
+
+        /* Glossy overlay */
+        .example-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(255,255,255,0.1) 0%,
+                transparent 50%,
+                rgba(255,255,255,0.05) 100%
+            );
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 20px;
+        }
+
+        .example-image-wrapper:hover::after {
+            opacity: 1;
+        }
+
+        .transformation-arrow {
+            font-size: 32px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 300;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+                transform: translateX(0);
+            }
+            50% {
+                opacity: 0.6;
+                transform: translateX(5px);
+            }
+        }
+
+        .stage-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            margin-top: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .stage-badge.highlight {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.3);
+            color: #ffffff;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .transformation-flow {
+                gap: 20px;
+            }
+
+            .transformation-arrow {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .examples-section {
+                padding: 60px 30px;
+            }
+
+            .transformation-flow {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .transformation-arrow {
+                transform: rotate(90deg);
+                font-size: 28px;
+            }
+
+            .stage-label {
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -726,8 +918,8 @@
     <section class="hero">
         <div class="hero-content">
             <div class="beta-badge">🚀 Early Beta Access</div>
-            <h1>Your Brand.<br>Every Page. Perfect.</h1>
-            <p class="subtitle">Deploy campaign pages, A/B tests, ad landing pages, and more—all perfectly on-brand. Stop the paid growth bottleneck. Preserve your design system. Ship at the speed of thought.</p>
+            <h1>Turn Any Website Into<br>Campaign-Ready Pages. Instantly.</h1>
+            <p class="subtitle">Load any website and transform it into personalized campaign pages with AI. Preserve your brand, customize content, publish instantly. No coding required.</p>
             <form class="waitlist-form" action="https://docs.google.com/forms/d/e/1FAIpQLSevUDKhXKUrFt5HNvK9acxcgU8CaKUUVrMVGby0lZUh0yxU3w/formResponse" method="POST" target="hidden_iframe" onsubmit="setTimeout(function(){alert('Thank you for joining! We\'ll be in touch soon.');}, 500);">
                 <input type="email" name="entry.276857429" class="waitlist-input" placeholder="Enter your email" required>
                 <button type="submit" class="waitlist-submit">Join Beta Waitlist</button>
@@ -740,26 +932,106 @@
     <!-- Problem Section -->
     <section class="problem-section">
         <div class="container">
-            <h2 class="section-title">Marketing Moves Fast.<br>Your Tools Don't.</h2>
-            <p class="section-subtitle">High-performing teams are bottlenecked by outdated workflows. Time-to-market matters, and every day delayed is opportunity lost.</p>
+            <h2 class="section-title">Every Campaign Needs<br>Custom Pages. Fast.</h2>
+            <p class="section-subtitle">Your campaigns move fast, but creating unique pages for each one takes weeks. By the time they're ready, the opportunity is gone.</p>
 
             <div class="problem-grid">
                 <div class="problem-card glossy-card">
-                    <div class="problem-icon">⏱️</div>
-                    <h3>Speed Kills Growth</h3>
-                    <p>Campaign ideas take weeks to launch. By the time your pages are live, competitors have moved on to the next opportunity.</p>
+                    <div class="problem-icon">⏳</div>
+                    <h3>Campaign Pages Take Too Long</h3>
+                    <p>You need custom pages for each campaign, but building them from scratch takes weeks. Dev teams are backlogged, and generic templates don't match your brand.</p>
                 </div>
 
                 <div class="problem-card glossy-card">
-                    <div class="problem-icon">🔧</div>
-                    <h3>Engineering Bottleneck</h3>
-                    <p>Your roadmap is stuck in dev queues. Marketing can't move independently, and testing new strategies becomes impossible.</p>
+                    <div class="problem-icon">💥</div>
+                    <h3>Page Builders Break Your Brand</h3>
+                    <p>Drag-and-drop tools promise speed but deliver off-brand disasters. Fonts don't match, colors are wrong, and components feel foreign to your website.</p>
                 </div>
 
                 <div class="problem-card glossy-card">
-                    <div class="problem-icon">🎨</div>
-                    <h3>Brand Consistency Lost</h3>
-                    <p>Every tool promises "on-brand" pages. Reality? Fonts are off, colors don't match, and components feel foreign. Your brand gets diluted one page at a time.</p>
+                    <div class="problem-icon">🤯</div>
+                    <h3>Marketing Depends on Engineering</h3>
+                    <p>Every campaign page needs a dev ticket. You can't test ideas quickly or ship campaigns when you're ready. Your velocity is limited by sprint planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">See Apex in Action</h2>
+            <p class="section-subtitle">Watch how Apex edits existing websites while preserving brand identity—all in seconds</p>
+
+            <!-- RunPod Example -->
+            <div class="example-showcase">
+                <h3 class="example-title">RunPod: Edited for Product Launch Campaign</h3>
+                <p class="example-caption">Edited in 47 seconds · 100% brand consistency · Zero dev work</p>
+
+                <div class="transformation-flow">
+                    <div class="stage">
+                        <span class="stage-label">Original Site</span>
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1br2KQWgALbSwfUpjwGBKrj6bfCq9fyE0&sz=w2000" alt="RunPod original website" class="example-image">
+                        </div>
+                        <span class="stage-badge">Source</span>
+                    </div>
+
+                    <div class="transformation-arrow">→</div>
+
+                    <div class="stage">
+                        <span class="stage-label">Apex Processing</span>
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1U3PfxRYgC5JalRqwr-Zxp_LBgEaI10vj&sz=w2000" alt="RunPod being processed" class="example-image">
+                        </div>
+                        <span class="stage-badge">Analyzing</span>
+                    </div>
+
+                    <div class="transformation-arrow">→</div>
+
+                    <div class="stage">
+                        <span class="stage-label">Campaign Ready</span>
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1RFUHSLTVWmZZNuew3osW9wCewTfuOGwl&sz=w2000" alt="RunPod final campaign page" class="example-image">
+                        </div>
+                        <span class="stage-badge highlight">✓ Complete</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mellow Example -->
+            <div class="example-showcase">
+                <h3 class="example-title">Mellow: Customized for Target Audience</h3>
+                <p class="example-caption">Edited in 52 seconds · Design system preserved · Ready to deploy</p>
+
+                <div class="transformation-flow">
+                    <div class="stage">
+                        <span class="stage-label">Original Site</span>
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1bkMlulOmoDmcMXNX9X3DI8vT4kBGNGFv&sz=w2000" alt="Mellow original website" class="example-image">
+                        </div>
+                        <span class="stage-badge">Source</span>
+                    </div>
+
+                    <div class="transformation-arrow">→</div>
+
+                    <div class="stage">
+                        <span class="stage-label">Apex Processing</span>
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=12uTKWZ6ZpUC0CMnJ5at_xPXEnAgdntFl&sz=w2000" alt="Mellow being processed" class="example-image">
+                        </div>
+                        <span class="stage-badge">Transforming</span>
+                    </div>
+
+                    <div class="transformation-arrow">→</div>
+
+                    <div class="stage">
+                        <span class="stage-label">Test Variant Ready</span>
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1zTf3OStXVFNRL1qn9mua8Ff_Bl3yVY83&sz=w2000" alt="Mellow final test variant" class="example-image">
+                        </div>
+                        <span class="stage-badge highlight">✓ Complete</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -768,43 +1040,71 @@
     <!-- Features Section -->
     <section id="features" class="features-section">
         <div class="container">
-            <h2 class="section-title gradient-text">Brand Preservation. Zero Compromise.</h2>
-            <p class="section-subtitle">Apex learns your design system once, then generates unlimited campaigns, tests, and ad pages—each one pixel-perfect and deployment-ready.</p>
+            <h2 class="section-title gradient-text">Your Campaign Page Studio</h2>
+            <p class="section-subtitle">Load any website and transform it into campaign-ready pages. AI preserves your brand while you customize content for each campaign.</p>
 
             <div class="features-grid">
                 <div class="feature-card glossy-card">
                     <div class="feature-number">01</div>
-                    <h3>Lock In Your Brand</h3>
-                    <p>Feed Apex your website once. It extracts every element of your design system—colors, fonts, spacing, components—and preserves them across every single page it creates.</p>
+                    <h3>Visual Page Customization</h3>
+                    <p>Click any element on the page to customize it for your campaign. Hover to inspect. No code, no complexity. Visual tools for precise control.</p>
                     <ul class="feature-list">
-                        <li>Design system extraction in seconds</li>
-                        <li>Component library preservation</li>
-                        <li>Brand consistency guaranteed</li>
-                        <li>Asset management built-in</li>
+                        <li>Click-to-select any element</li>
+                        <li>Visual element inspection</li>
+                        <li>Instant targeting for changes</li>
+                        <li>No technical knowledge needed</li>
                     </ul>
                 </div>
 
                 <div class="feature-card glossy-card">
                     <div class="feature-number">02</div>
-                    <h3>Generate Everything</h3>
-                    <p>Campaign pages. A/B test variants. Ad landing pages. SEO pages. ABM pages. Describe what you need or upload a CSV—Apex builds them all, perfectly branded.</p>
+                    <h3>AI-Powered Transformation</h3>
+                    <p>Describe your campaign needs in plain English. "Change hero for Q4 sale" or "Add testimonial section" - AI handles the rest while keeping your brand intact.</p>
                     <ul class="feature-list">
-                        <li>Campaign & ad page generation</li>
-                        <li>A/B test variant creation</li>
-                        <li>Bulk SEO/GEO page deployment</li>
-                        <li>Personalized ABM experiences</li>
+                        <li>Natural language instructions</li>
+                        <li>Automatic brand preservation</li>
+                        <li>Live preview of changes</li>
+                        <li>Smart content adaptation</li>
                     </ul>
                 </div>
 
                 <div class="feature-card glossy-card">
                     <div class="feature-number">03</div>
-                    <h3>Deploy Instantly</h3>
-                    <p>No rebuilds. No dev tickets. No deployment nightmares. Pages are production-ready and optimized the moment they're generated. Push live with confidence.</p>
+                    <h3>Instant Campaign Publishing</h3>
+                    <p>Your campaign page is production-ready the moment you create it. One-click deployment, shareable URL, no dev dependencies.</p>
                     <ul class="feature-list">
-                        <li>One-click deployment</li>
-                        <li>Production-ready code output</li>
-                        <li>Performance optimized automatically</li>
-                        <li>Zero configuration required</li>
+                        <li>One-click campaign launch</li>
+                        <li>Instant shareable URLs</li>
+                        <li>Auto-optimized for performance</li>
+                        <li>No deployment pipeline needed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="section-subtitle" style="margin-top: 100px; margin-bottom: 40px; font-size: 28px; color: rgba(255,255,255,0.9);">🚀 Coming Soon (2026)</h3>
+
+            <div class="features-grid">
+                <div class="feature-card glossy-card" style="opacity: 0.7;">
+                    <div class="feature-number">04</div>
+                    <h3>Bulk Campaign Generation <span style="font-size: 14px; color: rgba(255,255,255,0.5);">• 2026</span></h3>
+                    <p>Upload a CSV with locations, products, or audiences. Generate hundreds of personalized campaign pages automatically from one template.</p>
+                    <ul class="feature-list">
+                        <li>CSV to campaign pages</li>
+                        <li>Bulk A/B test generation</li>
+                        <li>Personalized page variants</li>
+                        <li>Programmatic campaign deployment</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card glossy-card" style="opacity: 0.7;">
+                    <div class="feature-number">05</div>
+                    <h3>SEO Campaign Optimization <span style="font-size: 14px; color: rgba(255,255,255,0.5);">• 2026</span></h3>
+                    <p>Auto-optimize campaign pages for search. Generate geo-targeted and keyword-optimized pages for maximum visibility.</p>
+                    <ul class="feature-list">
+                        <li>Automatic SEO optimization</li>
+                        <li>Geo-targeted campaigns</li>
+                        <li>Keyword-optimized pages</li>
+                        <li>Location-based personalization</li>
                     </ul>
                 </div>
             </div>
@@ -815,46 +1115,46 @@
     <section id="benefits" class="benefits-section">
         <div class="container">
             <h2 class="section-title">What Changes When You Use Apex</h2>
-            <p class="section-subtitle">Stop waiting on dev cycles. Start shipping campaigns that matter. Your competitors wish they moved this fast.</p>
+            <p class="section-subtitle">Create campaigns without coding. Launch without dev tickets. Your marketing team moves at campaign speed.</p>
 
             <div class="benefits-grid">
                 <div class="benefit-card glossy-card">
                     <div class="benefit-icon">⚡</div>
                     <div class="benefit-content">
-                        <h4>Ship Campaigns in Hours, Not Weeks</h4>
-                        <p>Morning standup to live campaign by lunch. Test more ideas, iterate faster, and capture opportunities before they vanish.</p>
+                        <h4>Launch Campaigns in Minutes</h4>
+                        <p>Create custom campaign pages in minutes, not weeks. Load a website, customize for your campaign, publish. No dev time required.</p>
                     </div>
                 </div>
 
                 <div class="benefit-card glossy-card">
                     <div class="benefit-icon">🎯</div>
                     <div class="benefit-content">
-                        <h4>Brand Consistency, Guaranteed</h4>
-                        <p>Every generated page matches your design system perfectly. No more off-brand disasters from quick-turn tools.</p>
+                        <h4>Perfect Brand Match Every Time</h4>
+                        <p>AI automatically preserves your fonts, colors, spacing, and components. Every campaign page matches your brand perfectly.</p>
                     </div>
                 </div>
 
                 <div class="benefit-card glossy-card">
-                    <div class="benefit-icon">📈</div>
+                    <div class="benefit-icon">🖱️</div>
                     <div class="benefit-content">
-                        <h4>Ad-to-Page Precision</h4>
-                        <p>Match every ad group with a custom landing page. Eliminate exit points, sync messaging perfectly, and watch conversion rates climb.</p>
+                        <h4>Visual Campaign Builder</h4>
+                        <p>Click to select, describe the change, see it live. No code, no complexity. Create campaign pages visually with AI assistance.</p>
                     </div>
                 </div>
 
                 <div class="benefit-card glossy-card">
-                    <div class="benefit-icon">🔍</div>
+                    <div class="benefit-icon">📱</div>
                     <div class="benefit-content">
-                        <h4>SEO at Scale</h4>
-                        <p>Generate geo-targeted and keyword-optimized pages by the hundreds. Own your category in search without armies of writers.</p>
+                        <h4>See Changes Live</h4>
+                        <p>Every customization appears instantly. Preview exactly how your campaign page will look before publishing. No surprises.</p>
                     </div>
                 </div>
 
                 <div class="benefit-card glossy-card">
                     <div class="benefit-icon">🚀</div>
                     <div class="benefit-content">
-                        <h4>Spreadsheet to 1000 Pages</h4>
-                        <p>Upload a CSV with cities, personas, or products. Generate hundreds of unique, on-brand pages programmatically. One input, infinite scale.</p>
+                        <h4>Deploy Campaigns Instantly</h4>
+                        <p>One click to launch. Get shareable URLs immediately. Your campaign pages are live and ready to drive results.</p>
                     </div>
                 </div>
 
@@ -862,7 +1162,7 @@
                     <div class="benefit-icon">💡</div>
                     <div class="benefit-content">
                         <h4>Marketing Independence</h4>
-                        <p>Own your velocity. No more sprint planning negotiations or waiting for engineering resources to free up.</p>
+                        <p>Own your campaign velocity. Create, customize, and launch without engineering. Test more, move faster, win more.</p>
                     </div>
                 </div>
             </div>
@@ -872,13 +1172,13 @@
     <!-- Social Proof Section -->
     <section class="social-proof-section">
         <div class="container">
-            <h2 class="section-title">Built for Performance</h2>
-            <p class="section-subtitle">Teams using AI-powered page generation see dramatic improvements in speed, scale, and conversion performance.</p>
+            <h2 class="section-title">Built for Campaign Speed</h2>
+            <p class="section-subtitle">AI-powered campaign page creation that preserves your brand—no engineering, no delays, no compromises.</p>
 
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">10x</div>
-                    <div class="stat-label">Faster Time-to-Market</div>
+                    <div class="stat-label">Faster Campaign Creation</div>
                 </div>
 
                 <div class="stat-card">
@@ -887,13 +1187,13 @@
                 </div>
 
                 <div class="stat-card">
-                    <div class="stat-number">1000+</div>
-                    <div class="stat-label">Pages from One Input</div>
+                    <div class="stat-number">Zero</div>
+                    <div class="stat-label">Dev Dependencies</div>
                 </div>
 
                 <div class="stat-card">
-                    <div class="stat-number">24hrs</div>
-                    <div class="stat-label">From Idea to Live</div>
+                    <div class="stat-number">&lt;5min</div>
+                    <div class="stat-label">To Campaign Ready</div>
                 </div>
             </div>
 
@@ -901,23 +1201,23 @@
 
             <div class="use-cases-grid">
                 <div class="use-case-card">
-                    <div class="use-case-title">🎯 Paid Ad Campaigns</div>
-                    <div class="use-case-description">Create unique landing pages for every ad group. Match messaging perfectly and eliminate friction between click and conversion.</div>
+                    <div class="use-case-title">🎯 Campaign Page Editing <span style="font-size: 11px; color: #32D74B; margin-left: 8px;">✓ AVAILABLE NOW</span></div>
+                    <div class="use-case-description">Edit landing pages for ad campaigns. Update messaging, swap images, change CTAs—all while preserving your brand.</div>
                 </div>
 
                 <div class="use-case-card">
-                    <div class="use-case-title">🧪 A/B Testing</div>
-                    <div class="use-case-description">Generate dozens of page variants instantly. Test layouts, messaging, and CTAs without touching code or waiting on dev resources.</div>
+                    <div class="use-case-title">🧪 A/B Test Preparation <span style="font-size: 11px; color: #32D74B; margin-left: 8px;">✓ AVAILABLE NOW</span></div>
+                    <div class="use-case-description">Quickly create page variants for testing. Edit existing pages to test different headlines, layouts, or offers.</div>
                 </div>
 
-                <div class="use-case-card">
-                    <div class="use-case-title">🌍 SEO/GEO Pages</div>
-                    <div class="use-case-description">Deploy hundreds of geo-targeted or keyword-optimized pages. Own local search results and capture high-intent traffic at scale.</div>
+                <div class="use-case-card" style="opacity: 0.6;">
+                    <div class="use-case-title">🌍 Bulk SEO/GEO Pages <span style="font-size: 11px; color: rgba(255,255,255,0.5); margin-left: 8px;">• 2026</span></div>
+                    <div class="use-case-description">Upload CSV to generate hundreds of geo-targeted pages. Own local search results and capture high-intent traffic at scale.</div>
                 </div>
 
-                <div class="use-case-card">
-                    <div class="use-case-title">👔 ABM Campaigns</div>
-                    <div class="use-case-description">Personalize pages for every target account. Show prospects you understand their needs with custom, relevant experiences.</div>
+                <div class="use-case-card" style="opacity: 0.6;">
+                    <div class="use-case-title">👔 ABM Page Generation <span style="font-size: 11px; color: rgba(255,255,255,0.5); margin-left: 8px;">• 2026</span></div>
+                    <div class="use-case-description">Generate personalized pages for target accounts from spreadsheet data. Show prospects custom, relevant experiences at scale.</div>
                 </div>
             </div>
         </div>
@@ -927,14 +1227,14 @@
     <section id="waitlist" class="cta-section">
         <div class="cta-content">
             <div class="beta-badge">✨ Exclusive Early Access</div>
-            <h2>Be Among the First<br>to Experience Apex</h2>
-            <p>We're onboarding a limited number of beta users. Join the waitlist to get priority access and help shape the future of brand-consistent, instant deployment.</p>
+            <h2>Get Early Access to the<br>AI Campaign Page Studio</h2>
+            <p>Start creating campaign pages with AI today. Visual customization studio available now. Bulk generation features (CSV uploads, SEO optimization) launching 2026.</p>
             <form class="waitlist-form" action="https://docs.google.com/forms/d/e/1FAIpQLSevUDKhXKUrFt5HNvK9acxcgU8CaKUUVrMVGby0lZUh0yxU3w/formResponse" method="POST" target="hidden_iframe2" onsubmit="setTimeout(function(){alert('🎉 You\'re on the list! Check your email for next steps.');}, 500);" style="margin-top: 40px; max-width: 600px;">
                 <input type="email" name="entry.276857429" class="waitlist-input" placeholder="Enter your work email" required>
                 <button type="submit" class="waitlist-submit">Get Early Access</button>
             </form>
             <iframe name="hidden_iframe2" style="display:none;"></iframe>
-            <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">Join 2,847 marketers already on the waitlist · Average wait time: 2 weeks</p>
+            <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">✓ Studio available immediately · 🚀 Bulk generation 2026</p>
         </div>
     </section>
 
@@ -943,7 +1243,7 @@
         <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;">
             <div class="footer-brand" style="max-width: 100%;">
                 <div class="logo">Apex</div>
-                <p>AI-powered page generation that preserves your brand across campaigns, A/B tests, and ads.</p>
+                <p>AI Campaign Page Studio that transforms any website into campaign-ready pages while preserving your brand perfectly.</p>
             </div>
         </div>
 
