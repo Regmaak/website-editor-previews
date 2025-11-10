@@ -1,1302 +1,1573 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
-  <head>
+<html lang="en">
+<head>
     
-    <meta charset="utf-8" />
-<meta name="description" content="Jio Institute Entrance Test is online proctored (non-adaptive) test. JET can be taken from anywhere online" />
-<link rel="shortlink" href="https://www.jioinstitute.edu.in/admissions/jio-institute-entrance-test-jet" />
-<link rel="canonical" href="https://www.jioinstitute.edu.in/admissions/jio-institute-entrance-test-jet" />
-<meta name="robots" content="index, follow" />
-<meta name="news_keywords" content="Jio Institute Entrance Test (JET)" />
-<meta property="og:site_name" content="JioInstitute" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.jioinstitute.edu.in/admissions/jio-institute-entrance-test-jet" />
-<meta property="og:title" content="Jio Institute Entrance Test (JET)" />
-<meta property="og:description" content="Jio Institute Entrance Test is online proctored (non-adaptive) test. JET can be taken from anywhere online" />
-<meta property="og:image" content="https://www.jioinstitute.edu.in/sites/default/files/styles/large/public/media_image/ji-og-logo.png" />
-<meta name="facebook-domain-verification" content="duxt3k40attp1yl43u0x6kixexwcz8" />
-<meta name="google-site-verification" content="fyXJUDoiC8zICE8G7hG61b22Ks7rDrN-T_rlWbajwew" />
-<meta name="MobileOptimized" content="width" />
-<meta name="HandheldFriendly" content="true" />
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<style>
-.page-view-search-api main .views-exposed-form form .js-form-item input, .header-menu-wrap div[id*="exposedformsearch-"] form .js-form-item input {
-    padding-right: 0.75rem !important;
-}
-.site-header-wrap1 .navigation ul.nav li .icon-search {
-    font-size: 0 ! important;;
-    position: relative;
-    top: 7px;
-    width: 24px;
-    margin-left: 0;
-    height: 23px;
-    background-size: 22px;
-}
-@media (max-width: 991px){
-    .site-header-wrap1 .navigation ul.nav li .icon-search {
-    font-size: 16px ! important;
-    position: relative;
-    top: 0;
-    width: auto;
-    margin: 0;
-    height: auto;
-    background: none;
-    box-shadow: none;
-    font-family: JioTypeW04-Light !important;
-    padding: 10px 5px 15px 1px;
-   }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegMaak - AI-Powered Campaign Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
+        /* Material Icons */
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+        }
 
+        /* Material Design Elevation System */
+        .glossy {
+            background: rgba(30,30,30,0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
 
+        .glossy-card {
+            background: rgba(30,30,30,0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 16px;
+            /* Material Design elevation dp8 */
+            box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),
+                        0px 8px 10px 1px rgba(0,0,0,0.14),
+                        0px 3px 14px 2px rgba(0,0,0,0.12);
+            transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        .glossy-card:hover {
+            /* Material Design elevation dp16 */
+            box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),
+                        0px 16px 24px 2px rgba(0,0,0,0.14),
+                        0px 6px 30px 5px rgba(0,0,0,0.12);
+        }
 
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 16px 64px;
+            backdrop-filter: blur(20px) saturate(180%);
+            background: rgba(18,18,18,0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.12);
+            z-index: 1000;
+            /* Material Design elevation dp4 */
+            box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+                        0px 4px 5px 0px rgba(0,0,0,0.14),
+                        0px 1px 10px 0px rgba(0,0,0,0.12);
+        }
 
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
+        .logo {
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
+        .logo .material-icons {
+            color: #00BCD4;
+        }
 
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
 
+        .nav-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
+        .nav-links a:hover {
+            color: rgba(255,255,255,0.87);
+        }
 
+        .cta-button {
+            padding: 10px 24px;
+            background: #00BCD4;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.25px;
+            cursor: pointer;
+            /* Material Design elevation dp2 */
+            box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),
+                        0px 2px 2px 0px rgba(0,0,0,0.14),
+                        0px 1px 5px 0px rgba(0,0,0,0.12);
+            transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        background-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
 
+        .cta-button:hover {
+            background: #00ACC1;
+            /* Material Design elevation dp4 */
+            box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+                        0px 4px 5px 0px rgba(0,0,0,0.14),
+                        0px 1px 10px 0px rgba(0,0,0,0.12);
+        }
 
+        .cta-button:active {
+            /* Material Design elevation dp8 */
+            box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),
+                        0px 8px 10px 1px rgba(0,0,0,0.14),
+                        0px 3px 14px 2px rgba(0,0,0,0.12);
+        }
 
+        /* Waitlist Form */
+        .waitlist-form {
+            display: flex;
+            gap: 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
 
+        .waitlist-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 16px 16px;
+            background: rgba(255,255,255,0.09);
+            border: none;
+            border-bottom: 1px solid rgba(255,255,255,0.42);
+            border-radius: 4px 4px 0 0;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 200ms cubic-bezier(0.0, 0, 0.2, 1),
+                        border-color 200ms cubic-bezier(0.0, 0, 0.2, 1);
+        }
 
-<meta http-equiv="x-ua-compatible" content="ie=edge" />
-<link rel="icon" href="https://www.jioinstitute.edu.in/sites/default/files/favicon.png" type="image/png" />
+        .waitlist-input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
 
-    <title>Jio Institute Entrance Test (JET) - Jio Institute</title>
-    <link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/core/modules/system/css/components/ajax-progress.module.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/core/modules/system/css/components/hidden.module.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/core/modules/system/css/components/js.module.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/core/modules/ckeditor5/css/ckeditor5.dialog.fix.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/core/modules/views/css/views.module.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/modules/contrib/ckeditor_accordion/css/accordion.frontend.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/core/modules/layout_discovery/layouts/onecol/onecol.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/user.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/progress.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/node.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/affix.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/book.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/contextual.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/feed-icon.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/field.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/header.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/help.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/icons.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/image-button.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/item-list.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/list-group.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/media.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/page.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/search-form.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/shortcut.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/sidebar.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/site-footer.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/skip-link.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/table.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/tabledrag.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/tableselect.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/tablesort-indicator.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/ui.widget.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/tabs.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/toolbar.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/vertical-tabs.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/views.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/webform.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/ui-dialog.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/custom/jioinstitute_subtheme/css/style.min.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/custom/jioinstitute_subtheme/css/style.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/form.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/components/breadcrumb.css?t3e1cz" />
-<link rel="stylesheet" media="all" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/colors/messages/messages-white.css?t3e1cz" />
-<link rel="stylesheet" media="print" href="https://www.jioinstitute.edu.in/themes/contrib/bootstrap_barrio/css/print.css?t3e1cz" />
+        .waitlist-input:hover {
+            background: rgba(255,255,255,0.13);
+            border-bottom-color: rgba(255,255,255,0.87);
+        }
 
-    
-  </head>
-  <body class="layout-no-sidebars page-node-482 path-node node--type-page">
-    <a href="#main-content" class="visually-hidden-focusable">
-      Skip to main content
-    </a>
-    
+        .waitlist-input:focus {
+            outline: none;
+            border-bottom: 2px solid #00BCD4;
+            background: rgba(255,255,255,0.13);
+            padding-bottom: 15px;
+        }
 
+        .waitlist-submit {
+            padding: 16px 32px;
+            background: #00BCD4;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.25px;
+            cursor: pointer;
+            /* Material Design elevation dp2 */
+            box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),
+                        0px 2px 2px 0px rgba(0,0,0,0.14),
+                        0px 1px 5px 0px rgba(0,0,0,0.12);
+            transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        background-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+        }
 
+        .waitlist-submit:hover {
+            background: #00ACC1;
+            /* Material Design elevation dp4 */
+            box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+                        0px 4px 5px 0px rgba(0,0,0,0.14),
+                        0px 1px 10px 0px rgba(0,0,0,0.12);
+        }
 
+        .waitlist-submit:active {
+            /* Material Design elevation dp8 */
+            box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),
+                        0px 8px 10px 1px rgba(0,0,0,0.14),
+                        0px 3px 14px 2px rgba(0,0,0,0.12);
+        }
 
+        .beta-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.12);
+            border: none;
+            border-radius: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: none;
+            margin-bottom: 24px;
+            color: rgba(255,255,255,0.87);
+        }
 
-      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-    
-<div id="page-wrapper">
-  <div id="page">
-   <div class="jio_com main-container">
-    <header id="header" class="header header-container bg-primary" role="banner" aria-label="Site header">
-    <div class="container">
-                                      
-                                                     <div class="site-header-wrap1">
-              <div class="header-logo">
-      <a href="/" title="Home" rel="home" class="navbar-brand">
-              <div class="header-logo-bg">
-            <img src="https://www.jioinstitute.edu.in/sites/default/files/logo.png" alt="Jio Institute" />
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 64px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(98,0,234,0.15) 0%, rgba(0,188,212,0.08) 40%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 96px;
+            font-weight: 300;
+            line-height: 1.167;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.6;
+            margin-bottom: 48px;
+            font-weight: 400;
+            letter-spacing: 0.15px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .primary-button {
+            padding: 16px 32px;
+            background: #00BCD4;
+            color: #000000;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.25px;
+            cursor: pointer;
+            /* Material Design elevation dp2 */
+            box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),
+                        0px 2px 2px 0px rgba(0,0,0,0.14),
+                        0px 1px 5px 0px rgba(0,0,0,0.12);
+            transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        background-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .primary-button:hover {
+            background: #00ACC1;
+            /* Material Design elevation dp4 */
+            box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+                        0px 4px 5px 0px rgba(0,0,0,0.14),
+                        0px 1px 10px 0px rgba(0,0,0,0.12);
+        }
+
+        .primary-button:active {
+            /* Material Design elevation dp8 */
+            box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),
+                        0px 8px 10px 1px rgba(0,0,0,0.14),
+                        0px 3px 14px 2px rgba(0,0,0,0.12);
+        }
+
+        .secondary-button {
+            padding: 15px 31px;
+            background: transparent;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.7);
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.25px;
+            cursor: pointer;
+            transition: background-color 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        border-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secondary-button:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.87);
+        }
+
+        .secondary-button:active {
+            background: rgba(255,255,255,0.12);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 80px 64px;
+            background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 60px;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: 22px;
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            margin-bottom: 80px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .problem-card {
+            padding: 48px;
+            transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .problem-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .problem-icon .material-icons {
+            color: #6200EA;
+        }
+
+        .problem-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .problem-card p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 80px 64px;
+            background: #121212;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 80px;
+            justify-items: center;
+        }
+
+        .feature-card {
+            padding: 56px;
+            transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        border-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .feature-number {
+            font-size: 14px;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 16px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .feature-card h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .feature-card p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.8;
+            font-size: 17px;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            color: rgba(255,255,255,0.6);
+            font-size: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li::before {
+            content: '→';
+            margin-right: 12px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 80px 64px;
+            background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 80px;
+        }
+
+        .benefit-card {
+            padding: 48px;
+            display: flex;
+            align-items: start;
+            gap: 24px;
+            transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .benefit-icon {
+            font-size: 32px;
+            min-width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(98,0,234,0.2), rgba(0,188,212,0.2));
+            border-radius: 12px;
+            border: 1px solid rgba(0,188,212,0.3);
+        }
+
+        .benefit-icon .material-icons {
+            color: #00BCD4;
+        }
+
+        .benefit-content h4 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .benefit-content p {
+            color: rgba(255,255,255,0.6);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 96px 64px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1000px;
+            height: 1000px;
+            background: radial-gradient(circle, rgba(98,0,234,0.12) 0%, rgba(0,188,212,0.06) 40%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        .cta-content p {
+            font-size: 24px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 64px 40px;
+            background: rgba(18,18,18,0.95);
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-brand .logo {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.5);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .footer-column h5 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .footer-column ul li a:hover {
+            color: rgba(255,255,255,0.87);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 56px;
+            }
+
+            .subtitle {
+                font-size: 22px;
+            }
+
+            .section-title {
+                font-size: 42px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 16px 24px;
+            }
+
+            .hero {
+                padding: 96px 24px 64px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .primary-button,
+            .secondary-button {
+                width: 100%;
+            }
+
+            .problem-section,
+            .features-section,
+            .benefits-section,
+            .cta-section {
+                padding: 64px 24px;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Gradient text utility */
+        .gradient-text {
+            background: linear-gradient(135deg, #00BCD4 0%, #6200EA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Social Proof Section */
+        .social-proof-section {
+            padding: 80px 64px;
+            background: #121212;
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .stat-card {
+            padding: 32px;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00BCD4 0%, #6200EA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            font-weight: 500;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .use-case-card {
+            padding: 32px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            transition: background-color 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        border-color 280ms cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .use-case-card:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.12);
+            transform: translateY(-2px);
+        }
+
+        .use-case-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .use-case-description {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+        }
+
+        /* Examples Section */
+        .examples-section {
+            padding: 80px 64px;
+            background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+            position: relative;
+        }
+
+        .example-showcase {
+            margin-top: 80px;
+            margin-bottom: 100px;
+        }
+
+        .example-showcase:last-child {
+            margin-bottom: 0;
+        }
+
+        .example-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .example-caption {
+            font-size: 15px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .transformation-flow {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 32px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stage {
+            text-align: center;
+        }
+
+        .stage-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .example-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                        border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            /* Material Design elevation dp8 */
+            box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),
+                        0px 8px 10px 1px rgba(0,0,0,0.14),
+                        0px 3px 14px 2px rgba(0,0,0,0.12);
+        }
+
+        .example-image-wrapper:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: rgba(255,255,255,0.15);
+            /* Material Design elevation dp16 */
+            box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),
+                        0px 16px 24px 2px rgba(0,0,0,0.14),
+                        0px 6px 30px 5px rgba(0,0,0,0.12);
+        }
+
+        .example-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+        }
+
+        /* Fading edges effect */
+        .example-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom,
+                    rgba(0,0,0,0.1) 0%,
+                    transparent 15%,
+                    transparent 85%,
+                    rgba(0,0,0,0.4) 100%
+                ),
+                linear-gradient(to right,
+                    rgba(0,0,0,0.2) 0%,
+                    transparent 15%,
+                    transparent 85%,
+                    rgba(0,0,0,0.2) 100%
+                );
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 12px;
+        }
+
+        /* Glossy overlay */
+        .example-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(255,255,255,0.1) 0%,
+                transparent 50%,
+                rgba(255,255,255,0.05) 100%
+            );
+            pointer-events: none;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+        }
+
+        .example-image-wrapper:hover::after {
+            opacity: 1;
+        }
+
+        .transformation-arrow {
+            font-size: 32px;
+            color: rgba(255,255,255,0.3);
+            font-weight: 300;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+                transform: translateX(0);
+            }
+            50% {
+                opacity: 0.6;
+                transform: translateX(5px);
+            }
+        }
+
+        /* Processing Animation Effects */
+        @keyframes scanline {
+            0% {
+                top: 0%;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+
+        @keyframes processingGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0,188,212,0.3),
+                            0 0 40px rgba(98,0,234,0.2);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(0,188,212,0.6),
+                            0 0 80px rgba(98,0,234,0.4);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes progressBar {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* GIF-like Slideshow Animation */
+        @keyframes slideshow {
+            0%, 100% {
+                opacity: 1;
+            }
+            33.33%, 66.66% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes slideshow-stage1 {
+            0%, 30% {
+                opacity: 1;
+                z-index: 3;
+            }
+            33.33%, 100% {
+                opacity: 0;
+                z-index: 1;
+            }
+        }
+
+        @keyframes slideshow-stage2 {
+            0%, 30% {
+                opacity: 0;
+                z-index: 1;
+            }
+            33.33%, 63.33% {
+                opacity: 1;
+                z-index: 3;
+            }
+            66.66%, 100% {
+                opacity: 0;
+                z-index: 1;
+            }
+        }
+
+        @keyframes slideshow-stage3 {
+            0%, 63.33% {
+                opacity: 0;
+                z-index: 1;
+            }
+            66.66%, 96.66% {
+                opacity: 1;
+                z-index: 3;
+            }
+            100% {
+                opacity: 0;
+                z-index: 1;
+            }
+        }
+
+        .stage-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            margin-top: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .stage-badge.highlight {
+            background: rgba(0,188,212,0.2);
+            border-color: rgba(0,188,212,0.5);
+            color: #00BCD4;
+        }
+
+        /* Processing Overlay Animations */
+        .processing-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            pointer-events: none;
+        }
+
+        .processing-scanline {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to bottom, transparent, #00BCD4, transparent);
+            animation: scanline 2s linear infinite;
+            box-shadow: 0 0 10px #00BCD4;
+        }
+
+        .processing-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(0,188,212,0.2);
+            border-top-color: #00BCD4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .processing-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .processing-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #6200EA, #00BCD4);
+            animation: progressBar 3s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(0,188,212,0.8);
+        }
+
+        .processing-glow {
+            position: absolute;
+            inset: -2px;
+            border-radius: 12px;
+            animation: processingGlow 2s ease-in-out infinite;
+        }
+
+        .processing-dots {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .processing-dot {
+            width: 8px;
+            height: 8px;
+            background: #00BCD4;
+            border-radius: 50%;
+            animation: fadeInOut 1.4s ease-in-out infinite;
+        }
+
+        .processing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .processing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .stage[data-processing="true"] .example-image-wrapper {
+            animation: processingGlow 2s ease-in-out infinite;
+        }
+
+        /* GIF-like Slideshow Container */
+        .gif-slideshow {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+        }
+
+        .gif-slideshow-stage {
+            grid-column: 1;
+            grid-row: 1;
+            position: relative;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .gif-slideshow-stage1 {
+            animation: slideshow-stage1 9s ease-in-out infinite;
+        }
+
+        .gif-slideshow-stage2 {
+            animation: slideshow-stage2 9s ease-in-out infinite;
+        }
+
+        .gif-slideshow-stage3 {
+            animation: slideshow-stage3 9s ease-in-out infinite;
+        }
+
+        .gif-slideshow .example-image-wrapper {
+            width: 100%;
+            position: relative;
+        }
+
+        .gif-slideshow .stage-info {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            z-index: 4;
+        }
+
+        .gif-slideshow .stage-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .gif-slideshow .stage-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .transformation-flow {
+                gap: 20px;
+            }
+
+            .transformation-arrow {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .examples-section {
+                padding: 64px 24px;
+            }
+
+            .transformation-flow {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .transformation-arrow {
+                transform: rotate(90deg);
+                font-size: 28px;
+            }
+
+            .stage-label {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo"><span class="material-icons" style="font-size: 24px;">auto_fix_high</span>RegMaak</div>
+            <ul class="nav-links">
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#beta">Beta Perks</a></li>
+                <li><a href="#waitlist">Join Beta</a></li>
+            </ul>
+            <button class="cta-button" onclick="document.getElementById('waitlist').scrollIntoView({behavior: 'smooth'})">Join Waitlist</button>
         </div>
-        
-                </a>
-    </div>
+    </nav>
 
-                           <button class="header-mobile-menu js-nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-               </button>
-               <div class="header-menu-wrap">
-                  <div class="main-header-wrap-fiber">
-                    <div class="header-right-menu">
-                      <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-api-page-1" data-drupal-selector="views-exposed-form-search-api-page-1" id="block-exposedformsearch-apipage-1">
-  
-    
-      <div class="content">
-      
-<form action="/search" method="get" id="views-exposed-form-search-api-page-1" accept-charset="UTF-8">
-  <div class="d-flex flex-wrap">
-  
-
-
-
-
-
-  <div class="js-form-item js-form-type-textfield form-type-textfield js-form-item-filter form-item-filter form-no-label mb-3">
-                    <input placeholder="Search..." data-drupal-selector="edit-filter" type="text" id="edit-filter" name="filter" value="" size="30" maxlength="128" class="form-control" />
-
-                      </div>
-<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper mb-3" id="edit-actions"><button data-drupal-selector="edit-submit-search-api" type="submit" id="edit-submit-search-api" value="search" class="button js-form-submit form-submit btn btn-primary">search</button>
-</div>
-
-</div>
-
-</form>
-
-    </div>
-  </div>
-<nav role="navigation" aria-labelledby="block-headermenu-menu" id="block-headermenu" class="block block-menu navigation menu--header-menu">
-            
-  <h2 class="visually-hidden" id="block-headermenu-menu">Header Menu</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">About</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/about" class="nav-link nav-link--about" data-drupal-link-system-path="node/168">About Us</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/our-story" class="nav-link nav-link--about-our-story" data-drupal-link-system-path="node/166">Our Story</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/vision" class="nav-link nav-link--about-vision" data-drupal-link-system-path="node/167">Our Vision</a>
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Founders</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/about/smt-nita-ambani" class="nav-link nav-link--about-smt-nita-ambani" data-drupal-link-system-path="node/113">Smt. Nita Ambani</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/shri-mukesh-ambani" class="nav-link nav-link--about-shri-mukesh-ambani" data-drupal-link-system-path="node/114">Shri. Mukesh Ambani</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Leadership</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/about/chancellor" class="nav-link nav-link--about-chancellor" data-drupal-link-system-path="node/111">Chancellor</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/vice-chancellor" class="nav-link nav-link--about-vice-chancellor" data-drupal-link-system-path="node/110">Vice Chancellor</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/governing-council" class="nav-link nav-link--governing-council" data-drupal-link-system-path="node/404">Governing Council</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/global-advisory-council" class="nav-link nav-link--global-advisory-council" data-drupal-link-system-path="node/403">Global Advisory Council</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academic-advisors" class="nav-link nav-link--academic-advisors" data-drupal-link-system-path="node/405">Academic Advisors</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="/about/jio-institute-advantage" class="nav-link nav-link--about-jio-institute-advantage" data-drupal-link-system-path="node/169">The Jio Institute Advantage</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/growth-plan" class="nav-link nav-link--about-growth-plan" data-drupal-link-system-path="node/170">Growth Plan</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Academics</a>
-                        <ul class="menu">
-                    <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">PG Programmes</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/pg-programmes" class="nav-link nav-link--pg-programmes" data-drupal-link-system-path="node/171">PG Programmes</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/artificial-intelligence-data-science" class="nav-link nav-link--academics-artificial-intelligence-data-science" data-drupal-link-system-path="node/387">Artificial Intelligence &amp; Data Science</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/management-marketing" class="nav-link nav-link--academics-management-marketing" data-drupal-link-system-path="node/399">Management </a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/sports-management" class="nav-link nav-link--academics-sports-management" data-drupal-link-system-path="node/577">Sports Management</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="https://www.jioinstitute.edu.in/summer-programmes" class="nav-link nav-link-https--wwwjioinstituteeduin-summer-programmes">Summer Programme</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/experiential-learning" class="nav-link nav-link--experiential-learning" data-drupal-link-system-path="node/173">Experiential Learning</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/study-abroad" class="nav-link nav-link--academics-study-abroad" data-drupal-link-system-path="node/176">Study Abroad</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/capstone-industry-immersion" class="nav-link nav-link--academics-capstone-industry-immersion" data-drupal-link-system-path="node/174">Capstone &amp; Industry Immersion</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/laboratories" class="nav-link nav-link--academics-laboratories" data-drupal-link-system-path="node/465">Laboratories</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/library-information-centre" class="nav-link nav-link--academics-library-information-centre" data-drupal-link-system-path="node/494">Library</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded menu-item--active-trail">
-                          <a href="" class="nav-link active dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Admissions</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/admissions-2026-2027" class="nav-link nav-link--admissions-2026-2027" data-drupal-link-system-path="node/1383">Domestic</a>
-              </li>
-                <li class="nav-item menu-item--active-trail">
-                          <a href="/admissions/jio-institute-entrance-test-jet" class="nav-link active nav-link--admissions-jio-institute-entrance-test-jet is-active" data-drupal-link-system-path="node/482">Entrance Test</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Faculty &amp; Research</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/faculty" class="nav-link nav-link--faculty" data-drupal-link-system-path="node/159">Faculty</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/research" class="nav-link nav-link--research" data-drupal-link-system-path="node/232">Research</a>
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Centre of AI for All</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/centre-ai-all" class="nav-link nav-link--centre-ai-all" data-drupal-link-system-path="node/233">Overview</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/centre-ai-all/cvmi-research" class="nav-link nav-link--centre-ai-all-cvmi-research" data-drupal-link-system-path="node/908">CVMI Research</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="/innovation-entrepreneurship" class="nav-link nav-link--innovation-entrepreneurship" data-drupal-link-system-path="node/175">Innovation and Entrepreneurship</a>
-              </li>
-                <li class="nav-item">
-                          <a href="https://library.jioinstitute.edu.in" target="_blank" class="nav-link nav-link-https--libraryjioinstituteeduin" aria-label="Jio Digital Library - opens in a new tab">Jio Digital Library</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Career Services</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/placement-internships" class="nav-link nav-link--placement-internships" data-drupal-link-system-path="node/1653">Placements &amp; Internships</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/office-of-career-services/career-support" class="nav-link nav-link--office-of-career-services-career-support" data-drupal-link-system-path="node/1613">Career Support</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/office-of-career-services/industry-collaborations" class="nav-link nav-link--office-of-career-services-industry-collaborations" data-drupal-link-system-path="node/1614">Industry Collaborations</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/office-of-career-services" class="nav-link nav-link--office-of-career-services" data-drupal-link-system-path="node/1655">Office of Career Services</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/newsletters" class="nav-link nav-link--newsletters" data-drupal-link-system-path="node/1700">Newsletters</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">What’s New</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/news-stories" class="nav-link nav-link--news-stories" data-drupal-link-system-path="node/831">News</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/gallery" class="nav-link nav-link--gallery" data-drupal-link-system-path="node/943">Gallery</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="node/67">Events</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/newsletters" class="nav-link nav-link--newsletters" data-drupal-link-system-path="node/1700">Newsletters</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="https://apply.jioinstitute.edu.in/pgp/" target="_blank" class="btn btn-secondary arrow-red apply-now-btn d-none d-lg-inline-flex not-sitemap align-items-center apply-now apply-now-red-btn nav-link btnbtn-secondaryarrow-redapply-now-btnd-noned-lg-inline-flexnot-sitemapalign-items-centerapply-nowapply-now-red-btn nav-link-https--applyjioinstituteeduin-pgp-" aria-label="Apply Now - opens in a new tab">Apply Now</a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-
-                    </div>
-                    <div class="sub-header" id="sub-header">
-                      <div class="sub-header-right-list">
-                        <section class="row region region-secondary-menu">
-    <nav role="navigation" aria-labelledby="block-headertopmenu-menu" id="block-headertopmenu" class="block block-menu navigation menu--header-top-menu">
-            
-  <h2 class="visually-hidden" id="block-headertopmenu-menu">Header Top Menu</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item">
-                <a href="/executive-education" class="nav-link nav-link--executive-education" data-drupal-link-system-path="node/416">Executive Education</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://www.jioinstitute.edu.in/ecis-2026" class="nav-link nav-link-https--wwwjioinstituteeduin-ecis-2026">Teacher Training</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://careers.jioinstitute.edu.in" target="_blank" class="nav-link nav-link-https--careersjioinstituteeduin">Careers</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://library.jioinstitute.edu.in" target="_blank" class="nav-link nav-link-https--libraryjioinstituteeduin" aria-label="Digital Library - opens in a new tab">Digital Library</a>
-              </li>
-                <li class="nav-item">
-                <a href="/campus-life" class="nav-link nav-link--campus-life" data-drupal-link-system-path="node/184">Campus Life</a>
-              </li>
-                <li class="nav-item">
-                <a href="/blog" target="_self" class="nav-link nav-link--blog" data-drupal-link-system-path="node/1121">Blog</a>
-              </li>
-                <li class="nav-item">
-                <button target="_self" class="icon-search nav-link nav-link-" aria-label="search" type="button">Search</button>
-              </li>
-                <li class="nav-item menu-item--expanded">
-                <span class="d-none social-media-links-wrapper nav-link d-nonesocial-media-links-wrapper nav-link-">Social Media Links</span>
-                                <ul class="menu">
-                    <li class="nav-item">
-                <a href="https://www.linkedin.com/company/jio-institute" target="_blank" class="icon-s icon-linkedIn not-sitemap nav-link icon-sicon-linkedInnot-sitemap nav-link-https--wwwlinkedincom-company-jio-institute" aria-label="Linkedin - opens in a new tab">Linkedin</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://www.instagram.com/jio_institute" target="_blank" class="icon-s icon-instagram not-sitemap nav-link icon-sicon-instagramnot-sitemap nav-link-https--wwwinstagramcom-jio-institute" aria-label="Instagram - opens in a new tab">Instagram</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://www.youtube.com/channel/UC9X1xUUDHG61_czm7QzNnQg" target="_blank" class="icon-s icon-youtube not-sitemap nav-link icon-sicon-youtubenot-sitemap nav-link-https--wwwyoutubecom-channel-uc9x1xuudhg61-czm7qznnqg" aria-label="Youtube - opens in a new tab">Youtube</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://www.facebook.com/jioinstitute1" target="_blank" class="icon-s icon-facebook not-sitemap nav-link icon-sicon-facebooknot-sitemap nav-link-https--wwwfacebookcom-jioinstitute1" aria-label="Facebook - opens in a new tab">Facebook</a>
-              </li>
-        </ul>
-  
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </section>
-
-                      </div>
-                    </div>
-                                        <div class="mobile-nav-container-wrapper d-block d-lg-none">
-                      <div class="mobile-nav-container">
-                          <div class="nav-wrapper d-none">
-                              <nav role="navigation">
-                                  <div class="nav-toggle">
-                                      <button type="button" class="nav-back" aria-label="Back to Previous Menu"></button>
-                                      <span class="nav-title">Menu</span>
-                                      <span class="nav-close"></span>
-                                  </div>
-                                    <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-api-page-1" data-drupal-selector="views-exposed-form-search-api-page-1" id="block-exposedformsearch-apipage-1">
-  
-    
-      <div class="content">
-      
-<form action="/search" method="get" id="views-exposed-form-search-api-page-1" accept-charset="UTF-8">
-  <div class="d-flex flex-wrap">
-  
-
-
-
-
-
-  <div class="js-form-item js-form-type-textfield form-type-textfield js-form-item-filter form-item-filter form-no-label mb-3">
-                    <input placeholder="Search..." data-drupal-selector="edit-filter" type="text" id="edit-filter" name="filter" value="" size="30" maxlength="128" class="form-control" />
-
-                      </div>
-<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper mb-3" id="edit-actions"><button data-drupal-selector="edit-submit-search-api" type="submit" id="edit-submit-search-api" value="search" class="button js-form-submit form-submit btn btn-primary">search</button>
-</div>
-
-</div>
-
-</form>
-
-    </div>
-  </div>
-<nav role="navigation" aria-labelledby="block-headermenu-menu" id="block-headermenu" class="block block-menu navigation menu--header-menu">
-            
-  <h2 class="visually-hidden" id="block-headermenu-menu">Header Menu</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">About</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/about" class="nav-link nav-link--about" data-drupal-link-system-path="node/168">About Us</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/our-story" class="nav-link nav-link--about-our-story" data-drupal-link-system-path="node/166">Our Story</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/vision" class="nav-link nav-link--about-vision" data-drupal-link-system-path="node/167">Our Vision</a>
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Founders</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/about/smt-nita-ambani" class="nav-link nav-link--about-smt-nita-ambani" data-drupal-link-system-path="node/113">Smt. Nita Ambani</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/shri-mukesh-ambani" class="nav-link nav-link--about-shri-mukesh-ambani" data-drupal-link-system-path="node/114">Shri. Mukesh Ambani</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Leadership</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/about/chancellor" class="nav-link nav-link--about-chancellor" data-drupal-link-system-path="node/111">Chancellor</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/vice-chancellor" class="nav-link nav-link--about-vice-chancellor" data-drupal-link-system-path="node/110">Vice Chancellor</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/governing-council" class="nav-link nav-link--governing-council" data-drupal-link-system-path="node/404">Governing Council</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/global-advisory-council" class="nav-link nav-link--global-advisory-council" data-drupal-link-system-path="node/403">Global Advisory Council</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academic-advisors" class="nav-link nav-link--academic-advisors" data-drupal-link-system-path="node/405">Academic Advisors</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="/about/jio-institute-advantage" class="nav-link nav-link--about-jio-institute-advantage" data-drupal-link-system-path="node/169">The Jio Institute Advantage</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/about/growth-plan" class="nav-link nav-link--about-growth-plan" data-drupal-link-system-path="node/170">Growth Plan</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Academics</a>
-                        <ul class="menu">
-                    <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">PG Programmes</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/pg-programmes" class="nav-link nav-link--pg-programmes" data-drupal-link-system-path="node/171">PG Programmes</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/artificial-intelligence-data-science" class="nav-link nav-link--academics-artificial-intelligence-data-science" data-drupal-link-system-path="node/387">Artificial Intelligence &amp; Data Science</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/management-marketing" class="nav-link nav-link--academics-management-marketing" data-drupal-link-system-path="node/399">Management </a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/sports-management" class="nav-link nav-link--academics-sports-management" data-drupal-link-system-path="node/577">Sports Management</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="https://www.jioinstitute.edu.in/summer-programmes" class="nav-link nav-link-https--wwwjioinstituteeduin-summer-programmes">Summer Programme</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/experiential-learning" class="nav-link nav-link--experiential-learning" data-drupal-link-system-path="node/173">Experiential Learning</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/study-abroad" class="nav-link nav-link--academics-study-abroad" data-drupal-link-system-path="node/176">Study Abroad</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/capstone-industry-immersion" class="nav-link nav-link--academics-capstone-industry-immersion" data-drupal-link-system-path="node/174">Capstone &amp; Industry Immersion</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/laboratories" class="nav-link nav-link--academics-laboratories" data-drupal-link-system-path="node/465">Laboratories</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/academics/library-information-centre" class="nav-link nav-link--academics-library-information-centre" data-drupal-link-system-path="node/494">Library</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded menu-item--active-trail">
-                          <a href="" class="nav-link active dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Admissions</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/admissions-2026-2027" class="nav-link nav-link--admissions-2026-2027" data-drupal-link-system-path="node/1383">Domestic</a>
-              </li>
-                <li class="nav-item menu-item--active-trail">
-                          <a href="/admissions/jio-institute-entrance-test-jet" class="nav-link active nav-link--admissions-jio-institute-entrance-test-jet is-active" data-drupal-link-system-path="node/482">Entrance Test</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Faculty &amp; Research</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/faculty" class="nav-link nav-link--faculty" data-drupal-link-system-path="node/159">Faculty</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/research" class="nav-link nav-link--research" data-drupal-link-system-path="node/232">Research</a>
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Centre of AI for All</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/centre-ai-all" class="nav-link nav-link--centre-ai-all" data-drupal-link-system-path="node/233">Overview</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/centre-ai-all/cvmi-research" class="nav-link nav-link--centre-ai-all-cvmi-research" data-drupal-link-system-path="node/908">CVMI Research</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="/innovation-entrepreneurship" class="nav-link nav-link--innovation-entrepreneurship" data-drupal-link-system-path="node/175">Innovation and Entrepreneurship</a>
-              </li>
-                <li class="nav-item">
-                          <a href="https://library.jioinstitute.edu.in" target="_blank" class="nav-link nav-link-https--libraryjioinstituteeduin" aria-label="Jio Digital Library - opens in a new tab">Jio Digital Library</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Career Services</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/placement-internships" class="nav-link nav-link--placement-internships" data-drupal-link-system-path="node/1653">Placements &amp; Internships</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/office-of-career-services/career-support" class="nav-link nav-link--office-of-career-services-career-support" data-drupal-link-system-path="node/1613">Career Support</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/office-of-career-services/industry-collaborations" class="nav-link nav-link--office-of-career-services-industry-collaborations" data-drupal-link-system-path="node/1614">Industry Collaborations</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/office-of-career-services" class="nav-link nav-link--office-of-career-services" data-drupal-link-system-path="node/1655">Office of Career Services</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/newsletters" class="nav-link nav-link--newsletters" data-drupal-link-system-path="node/1700">Newsletters</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item menu-item--expanded">
-                          <a href="" class="nav-link dropdown-toggle nav-link-" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">What’s New</a>
-                        <ul class="menu">
-                    <li class="nav-item">
-                          <a href="/news-stories" class="nav-link nav-link--news-stories" data-drupal-link-system-path="node/831">News</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/gallery" class="nav-link nav-link--gallery" data-drupal-link-system-path="node/943">Gallery</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="node/67">Events</a>
-              </li>
-                <li class="nav-item">
-                          <a href="/newsletters" class="nav-link nav-link--newsletters" data-drupal-link-system-path="node/1700">Newsletters</a>
-              </li>
-        </ul>
-  
-              </li>
-                <li class="nav-item">
-                          <a href="https://apply.jioinstitute.edu.in/pgp/" target="_blank" class="btn btn-secondary arrow-red apply-now-btn d-none d-lg-inline-flex not-sitemap align-items-center apply-now apply-now-red-btn nav-link btnbtn-secondaryarrow-redapply-now-btnd-noned-lg-inline-flexnot-sitemapalign-items-centerapply-nowapply-now-red-btn nav-link-https--applyjioinstituteeduin-pgp-" aria-label="Apply Now - opens in a new tab">Apply Now</a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-
-                              </nav>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-               </div>
-                                                                  </div> 
-                    </div>
-    </header>
-    <div class="header-top-space"></div>
-   </div>
-          <div class="highlighted">
-        <aside class="section clearfix main-container full_width" role="complementary">
-            <div data-drupal-messages-fallback class="hidden"></div>
-
-
-        </aside>
-      </div>
-            <div id="main-wrapper" class="layout-main-wrapper clearfix main-container full_width">
-              <div id="main">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-12">
-                        <div id="block-bootstrap-barrio-subtheme-breadcrumbs" class="block block-system block-system-breadcrumb-block">
-  
-    
-      <div class="content">
-      
-
-  <nav role="navigation" aria-label="breadcrumb" style="">
-    <ol class="breadcrumb">
-                  <li class="breadcrumb-item">
-          <a href="/">Home</a>
-        </li>
-                        <li class="breadcrumb-item active">
-          Admissions
-        </li>
-                        <li class="breadcrumb-item active">
-          Jio Institute Entrance Test Jet
-        </li>
-              </ol>
-  </nav>
-
-    </div>
-  </div>
-
-
-                  </div>
-              </div>
-          </div>
-          <div class="row-offcanvas row-offcanvas-left clearfix">
-              <main>
-                <section class="section">
-                  <a id="main-content" tabindex="-1"></a>
-                    <div id="block-bootstrap-barrio-subtheme-content" class="block block-system block-system-main-block">
-  
-    
-      <div class="content">
-      
-
-<article data-history-node-id="482" role="article" class="node node--type-page node--view-mode-full clearfix">
-  <header>
-    
-        
-      </header>
-  <div class="node__content clearfix">
-      <div class="container layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="views-element-container block block-views block-views-blockbasic-page-block-4">
-  
-    
-      <div class="content">
-      <div><div class="container-fluid pb-lg-4 view view-basic-page view-id-basic_page view-display-id-block_4 js-view-dom-id-9d2e6db4beebc5f14881b1a3793aaad63263d86506f28f66343cd372a6860f3d">
-  
-    
-      
-      <div class="view-content row">
-          <div class="views-row">
-    <div class="views-field views-field-nothing"><span class="field-content"><div class="row">
-        <div class="col">
-          <h1 class="h1-01 font-bold mb-3 mt-lg-4">Jio Institute Entrance Test (JET)</h1>
-          <div class="d-lg-none">
-            <div class="rounded-circle masthead-rounded-circle-mob overflow-hidden">
-              <img src="https://writingo-live.s3.amazonaws.com/Template_Images/generated_image_715d6331-9560-466e-9098-74b610940abf.png" alt="Jio Institute Entrance Test (JET) 2026-27" class="w-100">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="beta-badge"><span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">rocket_launch</span>Early Beta Access</div>
+            <h1>Stop Waiting for Dev Teams.<br>Ship Campaign Pages Today.</h1>
+            <p class="subtitle">Transform any website into campaign-ready pages in minutes. AI preserves your brand while you customize and launch—no coding, no delays, no dependencies.</p>
+            <div class="hero-buttons">
+                <button class="primary-button" onclick="document.getElementById('waitlist').scrollIntoView({behavior: 'smooth'})">Join Beta Waitlist</button>
+                <button class="secondary-button" onclick="document.getElementById('examples').scrollIntoView({behavior: 'smooth'})">See Examples</button>
             </div>
-          </div>
-          <div class="banner-info-text">
-            <p>Jio Institute has opened admissions for PGP in Artificial Intelligence &amp; Data Science, PGP in Management and PGP in Sports Management for the Class of 2026-27. These are one-year, full-time residential programmes. As a part of admission and selection process, the candidate is required to appear for Jio Institute Entrance Test (JET) after successful submission of the online application form.</p><p>&nbsp;</p><p>&nbsp;</p><p><a class="arrow-white btn btn-primary center-v " href="https://apply.jioinstitute.edu.in/pgp/" id="ap-link-details-maids">Apply Now</a> &nbsp;<a class="arrow-red btn btn-secondary center-v" href="https://www.jioinstitute.edu.in/sites/default/files/media_document/Admissions%20Brochure%202026-27.pdf" id="ap-link-details-maids">Download Brochure</a></p>
-          </div>
+            <p style="margin-top: 24px; font-size: 14px; color: rgba(255,255,255,0.5);"><span class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 2px;">lock</span> Limited to 500 beta users · Free during beta</p>
         </div>
-        <div class="col-auto d-lg-block d-none">
-          <div class="rounded-circle masthead-rounded-circle overflow-hidden">
-            <img src="https://writingo-live.s3.amazonaws.com/Template_Images/generated_image_715d6331-9560-466e-9098-74b610940abf.png" alt="Jio Institute Entrance Test (JET) 2026-27" class="w-100">
-          </div>
-        </div>
-      </div> </span></div>
-  </div>
-
-    </div>
-  
-          </div>
-</div>
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-  <div class="section-common-space container layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block block-layout-builder block-field-blocknodepagebody">
-  
-    
-      <div class="content">
-      
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="pb-2"><h2 class="subhead-bd text-primary-n">Jio Institute Entrance Test (online) date and time for PGP Batch of 2026-27</h2><table class="table table-bordered w-100 mt-0" style="table-layout:fixed;width:70%;"><tbody><tr class="bg-transparent"><td scope="row"><span>Jio Institute Entrance Test&nbsp;</span></td><td style="background-color:rgb(255, 255, 255);"><strong>13th &amp; 14th Dec 2025</strong></td></tr></tbody></table><h2 class="subhead-bd text-primary-n">General Instructions and Pre-requisites&nbsp;</h2><p>Jio Institute Entrance Test is online proctored (non-adaptive) test. JET can be taken from anywhere online by ensuring following general instructions:&nbsp;</p><ol><li><strong>Internet Connectivity</strong> - Ensure that you have a stable internet connection with a minimum speed of 512 kbps&nbsp;<br>&nbsp;</li><li><strong>Do not Refresh</strong> - Don’t refresh the webpage during the assessment. This will lead to immediate submission of your responses.&nbsp;<br>&nbsp;</li><li><strong>Auto Save</strong> - All your responses are saved automatically. In case of disconnection or shutdown, you will still be able to resume easily.</li></ol><p>&nbsp;</p><div class="pt-2 pb-2"><h2 class="subhead-bd text-primary-n">Section-wise Topic Coverage for PGP Programmes&nbsp;</h2></div><div class="row ji-faq-wrapper"><div class="col-12"><dl class="ckeditor-accordion"><dt><strong>PGP in Artificial Intelligence &amp; Data Science</strong></dt><dd><p><strong>Sections:&nbsp;</strong></p><ol style="margin-top:0cm;" type="1"><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Analytical Ability and Problem Solving: Logical Reasoning &amp; Problem Solving<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Quantitative Aptitude: Arithmetic, Algebra &amp; Data Interpretation<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Verbal Ability: Reading Comprehension, Sentence Completion, Sentence Correction, Sentence Formation<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Statistics and Applied Mathematics: Statistics, Linear Algebra, Calculus<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Basics of Programming &amp; Algorithms: Pseudo Code, Algorithms&nbsp;<o:p></o:p></li></ol><p><strong>Time allotted: </strong>1 hour and 16 Minutes&nbsp;</p></dd><dt><strong>PGP in Management&nbsp;</strong></dt><dd><p><strong>Sections:</strong></p><ol style="margin-top:0cm;" type="1"><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Quantitative Reasoning: Problem Solving, Numerical Ability and Data Sufficiency<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Verbal Reasoning: Reading Comprehension, Sentence Completion, Sentence Correction, Sentence Formation<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Integrated Reasoning: Critical Thinking and Data Analysis&nbsp;<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">General Awareness (Marketing)<o:p></o:p></li></ol><p><strong>Time allotted: </strong>1 hour and 10 Minutes&nbsp;</p></dd><dt><strong>PGP in Sports Management</strong></dt><dd><p><strong>Sections:&nbsp;</strong></p><ol style="margin-top:0cm;" type="1"><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Quantitative Reasoning: Problem Solving, Numerical Ability and Data Sufficiency<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Verbal Reasoning: Reading Comprehension, Sentence Completion, Sentence Correction, Sentence Formation<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Integrated Reasoning: Critical Thinking and Data Analysis<o:p></o:p></li><li class="MsoNormal" style="mso-list:l0 level1 lfo1;tab-stops:list 36.0pt;">Current Affairs: Sports: Sports General Knowledge</li></ol><p><strong>Time allotted: </strong>1 hour 10 Minutes&nbsp;</p></dd></dl></div></div><h2 class="subhead-sm-bd">&nbsp;</h2><h2 class="subhead-bd text-primary-n">Scores</h2><p>The JET score will be directly notified by email to Jio Institute immediately after giving the exam. The JET Score will be one of the components of holistic evaluation of the candidate along with past academic record, statement of purpose, letters of recommendation, relevance of work experience, extra-curricular activities, awards and accolades, performance in personal interview.</p><p>&nbsp;</p></div></div>
-      
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-  </div>
-</article>
-
-    </div>
-  </div>
-
-
-                </section>
-              </main>
-                                  </div>
-        </div>
-          </div>
-              <div class="footer-full-width-section">
-        <aside class="clearfix">
-            <section class="region region-footer-full-width-section">
-    <div id="block-addressblock" class="block block-block-content block-block-contentdb07f11d-2354-4c1a-b286-49686893c2d5">
-  
-    
-      <div class="content">
-        <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block block-layout-builder block-field-blockblock-contentbasicbody">
-  
-    
-      <div class="content">
-      
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><section class="bd-container-space bg-primary text-white">
-<div class="container">
-<div class="row align-items-center my-md-4 justify-content-around text-center text-lg-left">
-<div class="col-12 col-lg-auto my-2">
-<div class="d-flex align-items-center flex-column flex-lg-row">
-<div class="col-12 col-lg-auto p-0"><img alt="Location" src="https://www.jioinstitute.edu.in/sites/default/files/home_page/location.svg" /></div>
-
-<div class="col-12 col-lg-auto my-2">Location:<br />
-<span class="font-medium"><a aria-label=" Ulwe, Navi Mumbai, Maharashtra 410206 - opens in a new tab" class="text-white" href="https://goo.gl/maps/AqgmTqsNpoxhskiDA" target="”_blank”">Ulwe, Navi Mumbai, Maharashtra 410206</a></span></div>
-</div>
-</div>
-
-<div class="col-12 col-lg-auto my-2">
-<div class="d-flex align-items-center flex-column flex-lg-row">
-<div class="col-12 col-lg-auto p-0"><img alt="Write to us" src="https://www.jioinstitute.edu.in/sites/default/files/home_page/email.svg" /></div>
-
-<div class="col-12 col-lg-auto my-2">Write to us<br />
-<span class="font-medium"><a class="text-white" href="mailto:admissions@jioinstitute.edu.in">admissions@jioinstitute.edu.in</a><!--<br />
-<a class="text-white" href="mailto:contact@jioinstitute.edu.in">contact@jioinstitute.edu.in</a>--></span></div>
-</div>
-</div>
-
-<div class="col-12 col-lg-auto my-2">
-<div class="d-flex align-items-center flex-column flex-lg-row">
-<div class="col-12 col-lg-auto p-0"><img alt="Talk to us" src="https://www.jioinstitute.edu.in/sites/default/files/home_page/call.svg" /></div>
-
-<div class="col-12 col-lg-auto my-2">Talk to us<br />
-<span class="font-medium"><a class="text-white" href="tel:18008891100">1800-889-1100</a></span></div>
-</div>
-</div>
-</div>
-<!-- / .row --></div>
-<!-- / .container --></section>
-</div>
-      
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-<div id="block-floatingwhatsapplink" class="block block-block-content block-block-content77620611-5340-4e4b-ab6f-e99ba3cfe42a">
-  
-    
-      <div class="content">
-        <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block block-layout-builder block-field-blockblock-contentbasicbody">
-  
-    
-      <div class="content">
-      
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="floating-btn btn-whatsapp"><a class="btn btn-primary rounded-bottom-right-0 rounded-top-right-0" href="https://wa.me/919324286196?text=Hi"><img alt="location" src="https://www.jioinstitute.edu.in/sites/default/files/media_image/WhatsApp.svg" width="26"><span class="hover-info-text">WhatsApp Us</span></a></div></div>
-      
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-<div id="block-floatingcalllink" class="block block-block-content block-block-content9469e756-b6b1-46ca-a99b-8670087dd17b">
-  
-    
-      <div class="content">
-        <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block block-layout-builder block-field-blockblock-contentbasicbody">
-  
-    
-      <div class="content">
-      
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="floating-btn btn-call"><a class="btn btn-primary rounded-bottom-right-0 rounded-top-right-0 hover-info-text-talk" href="tel:18008891100"><img alt="location" src="https://www.jioinstitute.edu.in/sites/default/files/home_page/call.svg" width="26"><span class="hover-info-text">Talk To Us</span></a></div></div>
-      
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-<div id="block-downloadbrochure" class="block block-block-content block-block-contente0782a57-0cda-407d-aaa0-c85d9ce8de26">
-  
-    
-      <div class="content">
-        <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block block-layout-builder block-field-blockblock-contentbasicbody">
-  
-    
-      <div class="content">
-      
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="floating-btn btn-download"><button class="btn btn-primary rounded-bottom-right-0 rounded-top-right-0 hover-info-text-db" id="ee-trigger-form-1" type="button">
-    <img alt="Download Brochure" src="https://www.jioinstitute.edu.in/themes/custom/jioinstitute_subtheme/images/pdf-icon-white.svg" width="26">
-    <span class="hover-info-text"> Download Brochure</span>
-    </button></div></div>
-      
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-  </section>
-
-        </aside>
-      </div>
-        <footer class="site-footer new-version footer-container with-bg">
-              <div class="wrapMaxWidth">
-          <div class="footer footer-n1 bg-white">
-              <div class="site-footer-block-ui-section ft-nav">
-                <section class="footer-first">
-                  <ul class="d-flex flex-dt-row flex-column">
-                    <li>
-                        <section class="row region region-footer-first">
-    <nav role="navigation" aria-labelledby="block-aboutmenu-menu" id="block-aboutmenu" class="block block-menu navigation menu--about-menu">
-      
-  <h2 id="block-aboutmenu-menu">ABOUT</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item">
-                <a href="/about" class="nav-link nav-link--about" data-drupal-link-system-path="node/168">About Us</a>
-              </li>
-                <li class="nav-item">
-                <a href="/about/our-story" class="nav-link nav-link--about-our-story" data-drupal-link-system-path="node/166">Our Story</a>
-              </li>
-                <li class="nav-item">
-                <a href="/about/vision" class="nav-link nav-link--about-vision" data-drupal-link-system-path="node/167">Our Vision </a>
-              </li>
-                <li class="nav-item">
-                <a href="/about/jio-institute-advantage" class="nav-link nav-link--about-jio-institute-advantage" data-drupal-link-system-path="node/169">The Jio Institute Advantage</a>
-              </li>
-                <li class="nav-item">
-                <a href="/about/growth-plan" class="nav-link nav-link--about-growth-plan" data-drupal-link-system-path="node/170">Growth Plan</a>
-              </li>
-                <li class="nav-item">
-                <a href="/faq" class="nav-link nav-link--faq" data-drupal-link-system-path="node/60">Frequently Asked Questions</a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </section>
-
-                    </li>
-                    <li>
-                        <section class="row region region-footer-second">
-    <nav role="navigation" aria-labelledby="block-academiesmenu-menu" id="block-academiesmenu" class="block block-menu navigation menu--academies-menu">
-      
-  <h2 id="block-academiesmenu-menu">ACADEMICS</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item">
-                <a href="/pg-programmes" class="nav-link nav-link--pg-programmes" data-drupal-link-system-path="node/171">Academic Overview</a>
-              </li>
-                <li class="nav-item">
-                <a href="/experiential-learning" class="nav-link nav-link--experiential-learning" data-drupal-link-system-path="node/173">Holistic Learning</a>
-              </li>
-                <li class="nav-item">
-                <a href="/academics/study-abroad" class="nav-link nav-link--academics-study-abroad" data-drupal-link-system-path="node/176">Study Abroad</a>
-              </li>
-                <li class="nav-item">
-                <a href="/academics/capstone-industry-immersion" class="nav-link nav-link--academics-capstone-industry-immersion" data-drupal-link-system-path="node/174">Capstone &amp; Industry Immersion</a>
-              </li>
-                <li class="nav-item">
-                <a href="/academics/laboratories" class="nav-link nav-link--academics-laboratories" data-drupal-link-system-path="node/465">Laboratories</a>
-              </li>
-                <li class="nav-item">
-                <a href="/academics/library-information-centre" class="nav-link nav-link--academics-library-information-centre" data-drupal-link-system-path="node/494">Library </a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </section>
-
-                    </li>
-                    <li>
-                        <section class="row region region-footer-third">
-    <nav role="navigation" aria-labelledby="block-researchmenu-menu" id="block-researchmenu" class="block block-menu navigation menu--research-menu">
-      
-  <h2 id="block-researchmenu-menu">FACULTY &amp; RESEARCH</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item">
-                <a href="/faculty" class="nav-link nav-link--faculty" data-drupal-link-system-path="node/159">Faculty</a>
-              </li>
-                <li class="nav-item">
-                <a href="/research" class="nav-link nav-link--research" data-drupal-link-system-path="node/232">Research</a>
-              </li>
-                <li class="nav-item">
-                <a href="/innovation-entrepreneurship" class="nav-link nav-link--innovation-entrepreneurship" data-drupal-link-system-path="node/175">Innovation</a>
-              </li>
-                <li class="nav-item">
-                <a href="/centre-ai-all" class="nav-link nav-link--centre-ai-all" data-drupal-link-system-path="node/233">Centre of AI for All</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://library.jioinstitute.edu.in" target="_self" class="nav-link nav-link-https--libraryjioinstituteeduin" aria-label="Jio Digital Library - opens in a new tab">Jio Digital Library</a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </section>
-
-                    </li>
-                    <li>
-                        <section class="row region region-footer-fourth">
-    <nav role="navigation" aria-labelledby="block-newsevents-menu" id="block-newsevents" class="block block-menu navigation menu--news-events">
-            
-  <h2 class="visually-hidden" id="block-newsevents-menu">EVENTS</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item">
-                <a href="/campus-life" class="nav-link nav-link--campus-life" data-drupal-link-system-path="node/184">CAMPUS LIFE</a>
-              </li>
-                <li class="nav-item">
-                <a href="/executive-education" class="nav-link nav-link--executive-education" data-drupal-link-system-path="node/416">EXEC. EDUCATION</a>
-              </li>
-                <li class="nav-item">
-                <a href="/events" class="nav-link nav-link--events" data-drupal-link-system-path="node/67">EVENTS</a>
-              </li>
-                <li class="nav-item">
-                <a href="/news-stories" class="nav-link nav-link--news-stories" data-drupal-link-system-path="node/831">News </a>
-              </li>
-                <li class="nav-item">
-                <a href="/blog" class="nav-link nav-link--blog" data-drupal-link-system-path="node/1121">Blog</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://careers.jioinstitute.edu.in" target="_blank" class="nav-link nav-link-https--careersjioinstituteeduin">Careers</a>
-              </li>
-                <li class="nav-item">
-                <a href="/contacts" class="nav-link nav-link--contacts" data-drupal-link-system-path="node/84">CONTACT</a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </section>
-
-                    </li>
-                    <li>
-                        <section class="region region-footer-full-block-ui-section">
-    <div class="netcore-subscribe-form block block-jio-netcore block-netcore-subscription-block" data-drupal-selector="netcore-subscribe-form" id="block-netcoresubscriptionblock">
-  
-      <h2>SUBSCRIBE UPDATES</h2>
-    
-      <div class="content">
-      
-<form action="/admissions/jio-institute-entrance-test-jet" method="post" id="netcore-subscribe-form" accept-charset="UTF-8">
-  <div id="status_message"></div><div id="user_email">
-
-
-
-
-
-  <div class="js-form-item js-form-type-textfield form-type-textfield js-form-item-jio-netcore-user-email form-item-jio-netcore-user-email mb-3">
-          <label for="edit-jio-netcore-user-email">Enter your email id</label>
-                    <input placeholder="Enter email" aria-describedby="status_message" data-drupal-selector="edit-jio-netcore-user-email" type="text" id="edit-jio-netcore-user-email" name="jio_netcore_user_email" value="" size="60" maxlength="128" class="form-control" />
-
-                      </div>
-</div><button class="btn-secondary arrow-red center-v button js-form-submit form-submit btn btn-primary" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Subscribe">Subscribe</button>
-<input autocomplete="off" data-drupal-selector="form-bcvlt9szpcmeqiwaezfcmpjdqkju-1rl89r9kf9etma" type="hidden" name="form_build_id" value="form-BcVlt9SzPcMeqIWaEzFcmpjdqkjU_1RL89r9kf9etmA" class="form-control" />
-<input data-drupal-selector="edit-netcore-subscribe-form" type="hidden" name="form_id" value="netcore_subscribe_form" class="form-control" />
-
-</form>
-
-    </div>
-  </div>
-<div id="block-socialmedia" class="block block-block-content block-block-contentfc72c757-b356-45f2-a352-acf4c1b15136">
-  
-    
-      <div class="content">
-        <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block block-layout-builder block-field-blockblock-contentbasicbody">
-  
-    
-      <div class="content">
-      
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><h2 class="mt-4">Social Media</h2>
-
-<div class="ft-social">
-<ul>
-	<li><a href="https://www.linkedin.com/company/jio-institute" target="_blank" aria-label=" Linkedin - opens in a new tab"><img alt="LinkedIn" src="https://www.jioinstitute.edu.in/themes/custom/jioinstitute_subtheme/images/Linkedin_red_16x16.svg" /></a></li>
-	<li><a href="https://www.instagram.com/jio_institute/" target="_blank" aria-label=" Instagram - Opens in a new tab"><img alt="Instagram" src="https://www.jioinstitute.edu.in/themes/custom/jioinstitute_subtheme/images/ic_instagram.svg" /></a></li>
-	<li><a href="https://www.youtube.com/channel/UC9X1xUUDHG61_czm7QzNnQg" target="_blank" aria-label=" Youtube - opens in a new tab"><img alt="Youtube" src="https://www.jioinstitute.edu.in/themes/custom/jioinstitute_subtheme/images/ic_youtube.svg" /></a></li>
-	<li><a href="https://www.facebook.com/jioinstitute1" target="_blank" aria-label=" Facebook - opens in a new tab"><img alt="Facebook" src="https://www.jioinstitute.edu.in/themes/custom/jioinstitute_subtheme/images/ic_facebook.svg" /></a></li>
-</ul>
-</div>
-</div>
-      
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-  </section>
-
-                    </li>
-                  </ul>
-                </section>
-              </div>
-                          <div class="site-footer__bottom">
-                  <section class="region-footer-fifth region">
-    <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="block block-menu navigation menu--footer">
-            
-  <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
-  
-
-        
-              <ul class="clearfix nav navbar-nav">
-                    <li class="nav-item">
-                <a href="/terms-conditions" class="pl-sm-0 nav-link nav-link--terms-conditions" data-drupal-link-system-path="node/47">Terms and Conditions</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://www.jioinstitute.edu.in/policies" class="pl-sm-0 nav-link nav-link-https--wwwjioinstituteeduin-policies">Policies</a>
-              </li>
-                <li class="nav-item">
-                <a href="/sitemap" class="nav-link nav-link--sitemap" data-drupal-link-system-path="sitemap">Sitemap</a>
-              </li>
-                <li class="nav-item">
-                <a href="/faq" class="nav-link nav-link--faq" data-drupal-link-system-path="node/60">FAQs</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://jioinstitute.digiicampus.com/" class="nav-link nav-link-https--jioinstitutedigiicampuscom-">Faculty and Student login</a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-<nav role="navigation" aria-labelledby="block-rilfooter-menu" id="block-rilfooter" class="block block-menu navigation menu--ril-footer">
-            
-  <h2 class="visually-hidden" id="block-rilfooter-menu">Ril Footer</h2>
-  
-
-        
-              <ul class="clearfix nav">
-                    <li class="nav-item">
-                <a href="https://www.ril.com" target="_blank" class="pl-sm-0 nav-link nav-link-https--wwwrilcom" aria-label="Reliance Industries - opens in a new tab">Reliance Industries</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://www.reliancefoundation.org" target="_blank" class="nav-link nav-link-https--wwwreliancefoundationorg" aria-label="Reliance Foundation - opens in a new tab">Reliance Foundation</a>
-              </li>
-                <li class="nav-item">
-                <a href="https://www.jio.com" target="_blank" class="nav-link nav-link-https--wwwjiocom" aria-label="Jio - opens in a new tab">Jio</a>
-              </li>
-        </ul>
-  
-
-
-  </nav>
-
-  </section>
-
-              </div>
-                      </div>
-        </div>
-                  <div class="site-footer__seventh">
-            <div class="wrapMaxWidth">
-              <div class="footer footer-n1 bg-white">
-                  <section class="row region region-footer-seventh">
-    <div id="block-copyright" class="block block-block-content block-block-content15607cb4-a70b-432a-8868-df5e03f9fc37">
-  
-    
-      <div class="content">
-        <div class="layout layout--onecol">
-    <div  class="layout__region layout__region--content">
-      <div class="block block-layout-builder block-field-blockblock-contentbasicbody">
-  
-    
-      <div class="content">
-      
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="copy-right">© 2025 Jio Institute. All rights reserved.</div></div>
-      
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-  </section>
-
-              </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Every Campaign Needs<br>Custom Pages. Fast.</h2>
+            <p class="section-subtitle">Your campaigns move fast, but creating unique pages for each one takes weeks. By the time they're ready, the opportunity is gone.</p>
+
+            <div class="problem-grid">
+                <div class="problem-card glossy-card">
+                    <div class="problem-icon"><span class="material-icons" style="font-size: 48px;">schedule</span></div>
+                    <h3>Campaign Pages Take Weeks</h3>
+                    <p>Waiting on backlogged dev teams while campaign deadlines slip.</p>
+                </div>
+
+                <div class="problem-card glossy-card">
+                    <div class="problem-icon"><span class="material-icons" style="font-size: 48px;">warning</span></div>
+                    <h3>Templates Break Your Brand</h3>
+                    <p>Generic builders create off-brand results that feel foreign.</p>
+                </div>
+
+                <div class="problem-card glossy-card">
+                    <div class="problem-icon"><span class="material-icons" style="font-size: 48px;">engineering</span></div>
+                    <h3>Marketing Waits on Engineering</h3>
+                    <p>Campaign velocity depends on dev sprint planning, not market timing.</p>
+                </div>
             </div>
-          </div>
-                  </footer>
-  </div>
-</div>
-  </div>
-
-    
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </body>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="examples-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">See RegMaak in Action</h2>
+            <p class="section-subtitle">Watch how RegMaak Apex Editor transforms existing websites while preserving brand identity—all in seconds</p>
+
+            <!-- RunPod Example -->
+            <div class="example-showcase">
+                <h3 class="example-title">RunPod: Edited for Product Launch Campaign</h3>
+                <p class="example-caption">Edited in 47 seconds · 100% brand consistency · Zero dev work</p>
+
+                <div class="gif-slideshow">
+                    <!-- Stage 1: Original -->
+                    <div class="gif-slideshow-stage gif-slideshow-stage1">
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1br2KQWgALbSwfUpjwGBKrj6bfCq9fyE0&sz=w2000" alt="RunPod original website" class="example-image">
+                        </div>
+                        <div class="stage-info">
+                            <span class="stage-label">Original Site</span>
+                            <br>
+                            <span class="stage-badge">Source</span>
+                        </div>
+                    </div>
+
+                    <!-- Stage 2: Processing -->
+                    <div class="gif-slideshow-stage gif-slideshow-stage2">
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1U3PfxRYgC5JalRqwr-Zxp_LBgEaI10vj&sz=w2000" alt="RunPod being processed" class="example-image">
+                        </div>
+                        <div class="stage-info">
+                            <span class="stage-label">AI Processing</span>
+                            <br>
+                            <span class="stage-badge">Analyzing</span>
+                        </div>
+                    </div>
+
+                    <!-- Stage 3: Final -->
+                    <div class="gif-slideshow-stage gif-slideshow-stage3">
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1RFUHSLTVWmZZNuew3osW9wCewTfuOGwl&sz=w2000" alt="RunPod final campaign page" class="example-image">
+                        </div>
+                        <div class="stage-info">
+                            <span class="stage-label">Campaign Ready</span>
+                            <br>
+                            <span class="stage-badge highlight"><span class="material-icons" style="font-size: 11px; vertical-align: middle; margin-right: 2px;">check</span>Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mellow Example -->
+            <div class="example-showcase">
+                <h3 class="example-title">Mellow: Customized for Target Audience</h3>
+                <p class="example-caption">Edited in 52 seconds · Design system preserved · Ready to deploy</p>
+
+                <div class="gif-slideshow">
+                    <!-- Stage 1: Original -->
+                    <div class="gif-slideshow-stage gif-slideshow-stage1">
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1bkMlulOmoDmcMXNX9X3DI8vT4kBGNGFv&sz=w2000" alt="Mellow original website" class="example-image">
+                        </div>
+                        <div class="stage-info">
+                            <span class="stage-label">Original Site</span>
+                            <br>
+                            <span class="stage-badge">Source</span>
+                        </div>
+                    </div>
+
+                    <!-- Stage 2: Processing -->
+                    <div class="gif-slideshow-stage gif-slideshow-stage2">
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=12uTKWZ6ZpUC0CMnJ5at_xPXEnAgdntFl&sz=w2000" alt="Mellow being processed" class="example-image">
+                        </div>
+                        <div class="stage-info">
+                            <span class="stage-label">AI Processing</span>
+                            <br>
+                            <span class="stage-badge">Transforming</span>
+                        </div>
+                    </div>
+
+                    <!-- Stage 3: Final -->
+                    <div class="gif-slideshow-stage gif-slideshow-stage3">
+                        <div class="example-image-wrapper">
+                            <img src="https://drive.google.com/thumbnail?id=1zTf3OStXVFNRL1qn9mua8Ff_Bl3yVY83&sz=w2000" alt="Mellow final test variant" class="example-image">
+                        </div>
+                        <div class="stage-info">
+                            <span class="stage-label">Test Variant Ready</span>
+                            <br>
+                            <span class="stage-badge highlight"><span class="material-icons" style="font-size: 11px; vertical-align: middle; margin-right: 2px;">check</span>Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="features-section">
+        <div class="container">
+            <h2 class="section-title gradient-text">How It Works</h2>
+            <p class="section-subtitle">Transform any website into campaign-ready pages in three simple steps</p>
+
+            <div class="features-grid">
+                <div class="feature-card glossy-card">
+                    <div class="feature-number">01</div>
+                    <h3>Load & Select</h3>
+                    <p>Import any website URL. Click elements you want to customize. Visual tools let you target exactly what to change.</p>
+                </div>
+
+                <div class="feature-card glossy-card">
+                    <div class="feature-number">02</div>
+                    <h3>Customize with AI</h3>
+                    <p>Tell AI what changes you need in plain English. It preserves your brand while transforming content for your campaign.</p>
+                </div>
+
+                <div class="feature-card glossy-card">
+                    <div class="feature-number">03</div>
+                    <h3>Launch Instantly</h3>
+                    <p>Get a shareable URL immediately. Your campaign page is live and ready to drive results—no deployment needed.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 60px; font-size: 14px; color: rgba(255,255,255,0.5);">
+                <span class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 4px;">info</span>
+                Bulk generation & SEO optimization coming 2026
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Join Beta Section -->
+    <section id="beta" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Join the Beta?</h2>
+            <p class="section-subtitle">Get exclusive perks as an early adopter and help shape the future of campaign page creation</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon"><span class="material-icons" style="font-size: 32px;">stars</span></div>
+                    <div class="benefit-content">
+                        <h4>Lock in Founder Pricing</h4>
+                        <p>Beta users get lifetime access at 40% off our launch pricing. Never pay full price.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon"><span class="material-icons" style="font-size: 32px;">thumb_up</span></div>
+                    <div class="benefit-content">
+                        <h4>Shape the Product</h4>
+                        <p>Direct influence on roadmap and features. Your feedback drives what we build next.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon"><span class="material-icons" style="font-size: 32px;">support_agent</span></div>
+                    <div class="benefit-content">
+                        <h4>Priority Support Access</h4>
+                        <p>Direct line to our team. Get help, report bugs, and request features instantly.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-card glossy-card">
+                    <div class="benefit-icon"><span class="material-icons" style="font-size: 32px;">flash_on</span></div>
+                    <div class="benefit-content">
+                        <h4>Early Access to New Features</h4>
+                        <p>Be first to try new capabilities before public launch. Get competitive advantage.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 80px;">
+                <p style="font-size: 18px; color: rgba(255,255,255,0.8); margin-bottom: 16px;">
+                    <span class="material-icons" style="font-size: 18px; vertical-align: middle; margin-right: 4px;">schedule</span>
+                    Full Launch: Q2 2026
+                </p>
+                <p style="font-size: 14px; color: rgba(255,255,255,0.5);">
+                    Join 287 early adopters already testing RegMaak
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="waitlist" class="cta-section">
+        <div class="cta-content">
+            <div class="beta-badge"><span class="material-icons" style="font-size: 16px; vertical-align: middle; margin-right: 4px;">auto_awesome</span>Limited Beta Access</div>
+            <h2>Join 500 Beta Users<br>Building the Future</h2>
+            <p>Claim your spot before beta closes. Start shipping campaign pages today with zero dev dependencies.</p>
+
+            <!-- Beta Spots Progress -->
+            <div style="margin: 40px auto; max-width: 600px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                    <span style="font-size: 14px; color: rgba(255,255,255,0.7);">
+                        <span class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 4px;">people</span>
+                        287 / 500 spots claimed
+                    </span>
+                    <span style="font-size: 14px; color: #00BCD4; font-weight: 500;">213 left</span>
+                </div>
+                <div style="width: 100%; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;">
+                    <div style="width: 57.4%; height: 100%; background: linear-gradient(90deg, #6200EA, #00BCD4); border-radius: 4px;"></div>
+                </div>
+            </div>
+
+            <form class="waitlist-form" action="https://docs.google.com/forms/d/e/1FAIpQLSevUDKhXKUrFt5HNvK9acxcgU8CaKUUVrMVGby0lZUh0yxU3w/formResponse" method="POST" target="hidden_iframe2" onsubmit="setTimeout(function(){alert('✓ You\'re on the list! Check your email for next steps.');}, 500);" style="margin-top: 40px; max-width: 600px;">
+                <input type="email" name="entry.276857429" class="waitlist-input" placeholder="Enter your work email" required>
+                <button type="submit" class="waitlist-submit">Claim Your Beta Spot</button>
+            </form>
+            <iframe name="hidden_iframe2" style="display:none;"></iframe>
+            <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">
+                <span class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 2px;">schedule</span> Beta closes January 20, 2026 ·
+                <span class="material-icons" style="font-size: 14px; vertical-align: middle; margin-right: 2px;">lock</span> Free during beta
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;">
+            <div class="footer-brand" style="max-width: 100%;">
+                <div class="logo"><span class="material-icons" style="font-size: 32px;">auto_fix_high</span>RegMaak</div>
+                <p>AI-powered campaign studio that transforms any website into campaign-ready pages while preserving your brand perfectly.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 RegMaak. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
